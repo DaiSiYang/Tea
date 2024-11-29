@@ -1,0 +1,45 @@
+
+<van-sticky>
+  <van-search
+  input-align="center"
+  placeholder="请输入搜索关键词"
+/>
+</van-sticky>
+<view class="bck">
+<view class="hotItem" wx:for="{{HotList}}" wx:key="id">
+<!-- 上层 -->
+<view class="info">
+  <!-- 头像 -->
+<image src="{{item.avatarUrl}}" mode=""/>
+  <!-- 名字 -->
+  <text class="name">{{item.name}}</text>
+  <!-- 职位 -->
+  <text class="actor">{{item.actor}}</text>
+  <!-- 关注 -->
+
+  <view class="concern" bind:tap="change">+关注</view>
+</view>
+<!-- 中层 -->
+<view class="text">{{item.text}}</view>
+<!-- 下层 -->
+<view class="content">
+<image src="{{item.image1}}" mode=""/>
+<image src="{{item.image2}}" mode=""/>
+</view>
+<!-- 底部 -->
+<view class="bottom">
+  <view class="flex">
+    <image src="/static/HotIcon/转发.png" mode="widthFix" bindtap="triggerShare"/>
+    <text>{{item.forward}}</text>
+  </view>
+  <view class="flex" bind:tap="changeComments" data-id="{{item.id}}">
+    <image src="/static/HotIcon/评论.png" mode="widthFix"/>
+    <text >评论</text>
+  </view>
+  <view class="flex">
+    <image src="/static/HotIcon/赞.png" mode="widthFix"/>
+    <text>{{item.Thumbs}}</text>
+  </view>
+</view>
+</view>
+</view>

@@ -1,0 +1,12 @@
+<view class="handoff">
+<image src="/static/dynamic/切换.png" mode="" bind:tap="isTrue"/>
+</view>
+<!-- 导航栏 -->
+<member-nav></member-nav>
+<!-- banner -->
+<!-- <member-banner></member-banner> -->
+<!-- 商品列表 -->
+<!-- <member-commodity></member-commodity> -->
+<member-main  wx:if="{{IsFor}}"></member-main>
+<member-hot  wx:if="{{IsFor}}"></member-hot>
+<False-Main wx:else="{{IsFor}}"></False-Main>

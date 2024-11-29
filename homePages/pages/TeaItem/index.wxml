@@ -1,0 +1,10 @@
+<view wx:for="{{list}}" wx:key="{{item.id}}">
+
+<view class="img">
+<image src="/static/home/卷轴.png" mode="scaleToFill"/>
+</view>
+<view class="item" wx:for="{{list}}" wx:key="{{item.id}}">
+<view class="title">{{item.title}}</view>
+<view class="text">{{item.text}}</view>
+</view>
+</view>

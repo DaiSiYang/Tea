@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "member-nav":"/components/member/Nav/index",
+    "member-commodity":"/components/member/commodity",
+    "member-banner":"/components/member/banner",
+    "member-main":"/components/member/mian/index",
+    "member-hot":"/components/member/Hot/index",
+    "False-Main":"/components/member/FalseMain/index"
+  },
+  "navigationBarTitleText": "会员购"
+}

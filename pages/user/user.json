@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+
+    "user-recommend":"/components/user/recommend",
+
+    "user-panel":"/components/user/panel/index"
+
+  },
+  "navigationBarTitleText": "我的"
+}

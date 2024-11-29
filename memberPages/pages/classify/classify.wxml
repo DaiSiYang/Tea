@@ -1,0 +1,118 @@
+<van-sidebar class="sidebar" active-key="{{ activeKey }}" bind:change="onChange">
+  <van-sidebar-item title="茶壶" />
+  <van-sidebar-item title="茶盘" />
+  <van-sidebar-item title="茶叶" />
+  <van-sidebar-item title="红茶系列" />
+  <van-sidebar-item title="绿茶系列" />
+  <van-sidebar-item title="普洱茶系列" />
+  <van-sidebar-item title="紫砂壶系列" />
+</van-sidebar>
+<!-- 茶壶 -->
+<view wx:if="{{oneInfo}}" class="Box oneBox" >
+<view class="BoxItem" wx:for="{{teapotList}}" wx:key="index">
+<image src="{{item.url}}" mode="widthFix" />
+<text class="content">{{item.content}}</text>
+<view class="unit">￥<text class="price">{{item.price}}</text></view>
+<text class="Number">{{item.Number}}</text>
+<text class="addres">{{item.addres}}</text>
+<text class="stages">12期 先用后付 包邮</text>
+<text class="shop">{{item.shop}}</text>
+</view>
+</view>
+<!-- 茶盘 -->
+<view wx:if="{{twoInfo}}" class="Box twoBox">
+  <view class="BoxItem" wx:for="{{TeaTrayList}}" wx:key="index">
+<image src="{{item.url}}" mode="widthFix" />
+<text class="content">{{item.content}}</text>
+<view class="unit">￥<text class="price">{{item.price}}</text></view>
+<text class="Number">{{item.Number}}</text>
+<text class="addres">{{item.addres}}</text>
+<text class="stages">12期 先用后付 包邮</text>
+<text class="shop">{{item.shop}}</text>
+</view>
+</view>
+<!-- 茶叶 -->
+<view wx:if="{{thereInfo}}" class="Box thereBox">
+  <view class="BoxItem" wx:for="{{TeaList}}" wx:key="index">
+<image src="{{item.url}}" mode="widthFix" />
+<text class="content">{{item.content}}</text>
+<view class="unit">￥<text class="price">{{item.price}}</text></view>
+<text class="Number">{{item.Number}}</text>
+<text class="addres">{{item.addres}}</text>
+<text class="stages">12期 先用后付 包邮</text>
+<text class="shop">{{item.shop}}</text>
+</view>
+</view>
+
+<!-- 红茶 -->
+<view wx:if="{{foreInfo}}" class="Box thereBox">
+  <view class="BoxItem" wx:for="{{blackTeaList}}" wx:key="index">
+<image src="{{item.url}}" mode="widthFix" />
+<text class="content">{{item.content}}</text>
+<view class="unit">￥<text class="price">{{item.price}}</text></view>
+<text class="Number">{{item.Number}}</text>
+<text class="addres">{{item.addres}}</text>
+<text class="stages">12期 先用后付 包邮</text>
+<text class="shop">{{item.shop}}</text>
+</view>
+</view>
+<!-- 白茶 -->
+<!-- <view wx:if="{{FiveInfo}}" class="Box thereBox">
+  <view class="BoxItem" wx:for="{{whiteTeaList}}" wx:key="index">
+<image src="{{item.url}}" mode="widthFix" />
+<text class="content">{{item.content}}</text>
+<view class="unit">￥<text class="price">{{item.price}}</text></view>
+<text class="Number">{{item.Number}}</text>
+<text class="addres">{{item.addres}}</text>
+<text class="stages">12期 先用后付 包邮</text>
+<text class="shop">{{item.shop}}</text>
+</view>
+</view> -->
+<!-- 岩茶 -->
+<!-- <view wx:if="{{SixInfo}}" class="Box thereBox">
+  <view class="BoxItem" wx:for="{{RockList}}" wx:key="index">
+<image src="{{item.url}}" mode="widthFix" />
+<text class="content">{{item.content}}</text>
+<view class="unit">￥<text class="price">{{item.price}}</text></view>
+<text class="Number">{{item.Number}}</text>
+<text class="addres">{{item.addres}}</text>
+<text class="stages">12期 先用后付 包邮</text>
+<text class="shop">{{item.shop}}</text>
+</view>
+</view> -->
+<!-- 绿茶 -->
+<view wx:if="{{SevenInfo}}" class="Box thereBox">
+  <view class="BoxItem" wx:for="{{greenList}}" wx:key="index">
+<image src="{{item.url}}" mode="widthFix" />
+<text class="content">{{item.content}}</text>
+<view class="unit">￥<text class="price">{{item.price}}</text></view>
+<text class="Number">{{item.Number}}</text>
+<text class="addres">{{item.addres}}</text>
+<text class="stages">12期 先用后付 包邮</text>
+<text class="shop">{{item.shop}}</text>
+</view>
+</view>
+<!-- 普尔 -->
+<view wx:if="{{EightInfo}}" class="Box thereBox">
+  <view class="BoxItem" wx:for="{{PooleList}}" wx:key="index">
+<image src="{{item.url}}" mode="widthFix" />
+<text class="content">{{item.content}}</text>
+<view class="unit">￥<text class="price">{{item.price}}</text></view>
+<text class="Number">{{item.Number}}</text>
+<text class="addres">{{item.addres}}</text>
+<text class="stages">12期 先用后付 包邮</text>
+<text class="shop">{{item.shop}}</text>
+</view>
+</view>
+<!-- 紫砂 -->
+<view wx:if="{{NineInfo}}" class="Box thereBox">
+  <view class="BoxItem" wx:for="{{PurpleClayPot}}" wx:key="index">
+<image src="{{item.url}}" mode="widthFix" />
+<text class="content">{{item.content}}</text>
+<view class="unit">￥<text class="price">{{item.price}}</text></view>
+<text class="Number">{{item.Number}}</text>
+<text class="addres">{{item.addres}}</text>
+<text class="stages">12期 先用后付 包邮</text>
+<text class="shop">{{item.shop}}</text>
+</view>
+</view>

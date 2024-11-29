@@ -1,0 +1,114 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/course/course",
+    "pages/dynamic/dynamic",
+    "pages/member/member",
+    "pages/user/user"
+  ],
+  "subPackages": [
+    {
+      "root": "memberPages",
+      "pages": [
+        "pages/classify/classify",
+        "pages/cart/cart",
+        "pages/detail/indexs"
+      ]
+    },
+    {
+      "root": "userPages",
+      "pages": [
+        "pages/Setup/Setup",
+        "pages/Friend/index",
+        "pages/Customer/index"
+      ]
+    },
+    {
+      "root": "couresPages",
+      "pages": [
+        "pages/purchase/purchase",
+        "pages/Newlessons/Newlessons",
+        "pages/champion/champion",
+        "pages/free/free",
+        "pages/phone/phone",
+        "pages/More/more"
+      ]
+    },
+    {
+      "root": "homePages",
+      "pages": [
+        "pages/ClassTag/index",
+        "pages/efficacy/index",
+        "pages/Tea/index",
+        "pages/Tags/redTea/index",
+        "pages/Tags/whiteTea/index",
+        "pages/Tags/blackTea/index",
+        "pages/Tags/cliffTea/index",
+        "pages/Tags/cyanTea/index",
+        "pages/Tags/greenTea/index",
+        "pages/Tags/puerTea/index",
+        "pages/Tags/RockTea/index",
+        "pages/historys/index",
+        "pages/introduction/index",
+        "pages/TeaItem/index"
+      ]
+    },
+    {
+      "root": "dynamicPages",
+      "pages": [
+        "pages/comments/comments"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "茶語",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#efefef",
+    "navigationBarBackgroundColor": "#494136"
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+  ,
+	"tabBar": {
+    "selectedColor": "#494136",
+		"list": [
+			{
+				"text": "首页",
+				"pagePath": "pages/home/home",
+				"iconPath": "static/tabBar/home.png",
+				"selectedIconPath": "/static/tabBar/home-active.png"
+      },
+      {
+        "text": "课程",
+				"pagePath": "pages/course/course",
+				"iconPath": "static/tabBar/课程.png",
+				"selectedIconPath": "/static/tabBar/课程-active.png"
+      },
+			{
+				"text": "会员购",
+				"pagePath": "pages/member/member",
+				"iconPath": "static/tabBar/member.png",
+				"selectedIconPath": "static/tabBar/member-active .png"
+			},
+			{
+				"text": "茶圈",
+				"pagePath": "pages/dynamic/dynamic",
+				"iconPath": "static/tabBar/dynamic-active.png",
+				"selectedIconPath": "static/tabBar/dynamic.png"
+			},
+			{
+				"text": "我的",
+				"pagePath": "pages/user/user",
+				"iconPath": "static/tabBar/user.png",
+				"selectedIconPath": "/static/tabBar/user-active.png"
+			}
+    ]
+  },
+  "usingComponents": {
+
+  },
+  "onReachBottomDistance": 50
+}

@@ -1,0 +1,36 @@
+<!-- <view class="box">
+<view class="title">茶艺与茶道</view>
+<view class="subTitle">2024-11-25 20:56</view>
+<view class="title_1">茶艺:</view>
+<view class="text">茶艺是一种文化现象，它在中国优秀文化的基础上广泛吸收和借鉴了其它艺术形式，并扩展到文学、艺术等领域，形成了具有浓厚民族特色的中国茶文化。茶艺包括茶叶品评技法和艺术操作手段的鉴赏以及品茗美好环境的领略等整个品茶过程的美好意境，其过程体现形式和精神的相互统一。</view>
+<view class="title_1">茶道:</view>
+<view class="text">茶道是以修行得道为宗旨的饮茶艺术，它被视为一种烹茶饮茶的生活艺术、一种以茶为媒的生活礼仪以及一种以茶修身的生活方式。茶道精神是茶文化的核心，强调和谐、尊重、清净和禅意。</view>
+<view class="title_1">茶艺与茶道的区别:</view>
+<view class="title_1 title_2">区别：</view>
+<view class="text text_2">
+  茶艺重点在“艺”，重在习茶艺术，以获得审美享受；而茶道的重点在“道”，旨在通过茶艺修心养性、参悟大道。茶艺是茶文化的外在表现形式，而茶道则是茶文化的核心和精神内涵。
+</view>
+<view class="title_1 title_2">联系：</view>
+<view  class="text text_2"> 茶艺是茶道的基础和载体，茶道离不开茶艺。茶艺可以独立于茶道而存在，但茶道必须通过茶艺来体现和传承。两者相互依存、相互促进，共同构成了中国茶文化的丰富内涵。</view>
+</view> -->
+<view bind:tap="clickTea" data-id="{{id_1}}" class="item">
+<image src="https://cdn.pixabay.com/photo/2021/03/25/17/42/teapot-6123746_640.jpg" mode=""/>
+<view class="introduce">
+<view class="text">茶道是一种文化，起源于中国，并在南方及日本等地广泛传播。‌茶艺不仅包括茶叶的品评技法和艺术操作手段</view>
+<view class="title">茶艺</view>
+</view>
+</view>
+<view  bind:tap="clickTea" data-id="{{id_2}}" class="item">
+  <view class="introduce">
+<view class="text">茶道是一种品赏茶的美感之道，是茶文化的核心。‌它不仅是一种烹茶饮茶的生活艺术，还通过沏茶、赏茶、闻茶、饮茶等仪式，增进友谊，美心修德，学习礼法</view>
+<view class="title">茶道</view>
+</view>
+<image src="https://img0.baidu.com/it/u=3181873223,2651785507&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1732813200&t=7563b95c7e8280663cb405cf718b7f6f" mode=""/>
+</view>
+<view  bind:tap="clickTea" data-id="{{id_3}}" class="item">
+<image src="https://img1.baidu.com/it/u=772301751,2827507866&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667" mode=""/>
+<view class="introduce">
+<view class="text">‌茶道与茶艺的主要区别在于其定义、起源、重点和形式</view>
+<view class=" title">区别</view>
+</view>
+</view>

@@ -1,0 +1,39 @@
+.box{
+  display: flex;
+  padding: 20rpx;
+background-color: #fff;
+  .img{
+    width: 80rpx;
+    height: 80rpx;
+    image{
+      width: 80rpx;
+      height: 80rpx;
+      border-radius: 40rpx;
+    }
+  }
+  .minbox{
+    width: 90%;
+    border-bottom: 1rpx solid #c0c0c0;
+    padding-bottom: 20rpx;
+    margin-left: 20rpx;
+    margin-top: -7rpx;
+    .name{
+      font-size: 25rpx;
+      color: #777676;
+
+    }
+    .text{
+      width: 100%; 
+      margin-top: 7rpx;
+    }
+    .time{
+      font-size: 20rpx;
+      margin-top: 15rpx;
+      letter-spacing: 2px;
+      color: rgb(156, 158, 158);
+      .address{
+        letter-spacing: 0px;
+      }
+    }
+    }
+}

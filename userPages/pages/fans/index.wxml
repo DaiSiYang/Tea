@@ -1,0 +1,10 @@
+<view class="concernItem" wx:for="{{list}}" wx:key="{{item.id}}">
+<view class="img"><image src="{{item.avatarUrl}}" mode="widthFix"/></view>
+<view class="box">
+<view class="name">{{item.name}}</view>
+<view class="text">{{item.time}}</view>
+</view>
+<view class="concern">
+回关
+</view>
+</view>

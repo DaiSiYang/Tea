@@ -1,0 +1,27 @@
+/* components/course/tab/index.wxss */
+@import "/components/course/tab/iconfont.wxss";
+.tab{
+  display: flex;
+  justify-content: space-between;
+width: 95%;
+margin: auto;
+margin-top: 20rpx;
+height: 170rpx;
+background-color:#fff;
+.item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150rpx;
+  height: 170rpx;
+  .iconfont{
+    font-size: 50rpx;
+    margin-bottom: 20rpx;
+    color: #494136;
+}
+text{
+  font-size: 20rpx;
+}
+}
+}

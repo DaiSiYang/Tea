@@ -1,0 +1,15 @@
+<view class="title">
+<text class="hot">冠军课程</text>
+<text class="more" bind:tap="onMore">更多 > </text>
+</view>
+<view class="item" wx:for="{{itemList}}" wx:key="{{index}}">
+<view class="name">
+<text class="title">{{item.text}}</text>
+
+</view>
+<view class="subtitle">立享趣味线下课程，学习两天一夜</view>
+<view class="bottom">
+<text>现在购买，即买即学</text>
+
+</view>
+</view>

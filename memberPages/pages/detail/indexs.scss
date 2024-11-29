@@ -1,0 +1,116 @@
+
+.item{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .img{
+    width: 100%;
+    height: 800rpx;
+    overflow: hidden;
+    position: absolute;
+    top: -100rpx;
+    image{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .state{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+    padding-top: 20rpx;
+    box-sizing: border-box;
+    margin-top: 700rpx;
+    align-items: center;
+    .price{
+      font-size: 40rpx;
+      color: #494136;
+      font-weight: 600;
+      text{
+        font-size: 30rpx;
+        margin-right:5rpx;
+      }
+    }
+    .state_1{
+      font-size: 25rpx;
+      color: #494136;
+    }
+  }
+  .title_1{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+    box-sizing: border-box;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    align-items: center;
+    color: #494136;
+    .title{
+      font-weight: 600;
+      font-size: 30rpx;
+    }
+    .subtitle{
+      font-weight: 400;
+      margin-top: 10rpx;
+      font-size: 25rpx;
+    }
+    .box{
+      image{
+        width: 40rpx;
+        height: 40rpx;
+    }
+    view{
+      font-size: 23rpx;
+      font-weight: 600;
+    }
+    }
+  }
+  .shopper{
+    background-color: #fff;
+    display: flex;
+    
+    flex-direction: column;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+    box-sizing: border-box;
+    padding-top: 20rpx;
+    margin-top: 20rpx;
+    padding-bottom: 20rpx;
+   
+    .shopper-img{
+      display: flex;
+      align-items: center;
+      color: #095e0f;
+      font-weight: 600;
+      image{
+        width: 40rpx;
+        height: 40rpx;
+        margin-right: 20rpx;
+      }
+    }
+    .text{
+      font-size: 25rpx;
+      margin-top: 15rpx;
+      color: rgb(165, 165, 163);
+    }
+  }
+  .freight{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+
+    padding-top: 20rpx;
+    margin-top: 20rpx;
+    padding-bottom: 20rpx;
+    .title{
+      margin-right: 20rpx;
+      color: rgb(165, 165, 163);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+
+<van-tabs animated>
+  <van-tab title="推荐">
+    <dynamic-hot wx:if="{{IsFor}}"></dynamic-hot>
+    <view wx:else="{{IsFor}}">111</view>
+  </van-tab>
+  <van-tab title="关注">
+  <dynamic-concern wx:if="{{IsFor}}"></dynamic-concern>
+  <view wx:else="{{IsFor}}">111</view>
+  </van-tab>
+</van-tabs>

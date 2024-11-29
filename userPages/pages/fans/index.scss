@@ -1,0 +1,45 @@
+/* userPages/pages/concern/index.wxss */
+.concernItem{
+  position: relative;
+  background-color: #ffffff;
+  display: flex;
+  padding: 20rpx;
+  .img{
+    width: 100rpx;
+    height: 100rpx;
+    image{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  .box{
+    margin-left: 20rpx;
+    margin-top: 10rpx;
+
+    .name{
+      margin-bottom: 10rpx;
+      font-size: 29rpx;
+    }
+    .text{
+      font-size: 20rpx;
+      color: rgb(169, 172, 172);
+    }
+  }
+  .concern{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25rpx;
+    width: 130rpx;
+    height: 60rpx;
+    background-color: rgb(221, 0, 29);
+    border-radius: 6rpx;
+    margin-left: 340rpx;
+    margin-top: 23rpx;
+    font-weight: 500;
+    right: 40rpx;
+    color: #fff;
+  }
+}

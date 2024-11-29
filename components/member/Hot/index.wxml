@@ -1,0 +1,22 @@
+<view class="box">
+<!-- 主标题 -->
+  <view class="title">
+<view>热门推荐</view>
+</view>
+<!-- 副标题 -->
+<view class="subtitle">
+<view>RECOMMAND</view>
+</view>
+<!-- 装饰 -->
+<view class="ornament"></view>
+</view>
+
+<view class="memder">
+<view class="item" wx:for="{{list}}" wx:key="{{index}}" bind:tap="clickMain" data-id="{{item.id}}">
+<view class="img">
+  <image src="{{item.url}}" mode="heightFix"/>
+</view>
+<text>{{item.text}}</text>
+<view class="price"><text class="rmb">￥</text>{{item.price}}</view>
+</view>
+</view>

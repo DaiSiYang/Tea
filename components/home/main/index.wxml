@@ -1,0 +1,32 @@
+<!-- 目录 -->
+<view class="directory">
+  <view class="directoryItem" wx:for="{{directoryItemList}}" wx:key="id" data-id="{{item.id}}" bind:tap="GetId">
+    <image src="{{item.url}}" mode="heightFix" />
+    <view class="Masks"></view>
+    <view class="text">
+      <view class="left">
+        <text class="leftText">{{item.left}}</text>
+      </view>
+      <view class="right">
+        <text class="rightText">{{item.text}}</text>
+      </view>
+    </view>
+
+  </view>
+</view>
+<!-- 茶的历史 -->
+<view class="history">
+  <view class="title">
+    <text class="titleText">茶的历史</text>
+  </view>
+  <view class="subheading">古韵茶香飘万里，千年历史话沧桑</view>
+  <view class="subheadingItem" wx:for="{{historyList}}">
+    <view class="right" bind:tap="history" data-index="{{index}}">
+      <view class="dynasty"><text class="{{item.iconfont}}"></text></view>
+    </view>
+    <view class="left" bind:tap="history" data-index="{{index}}">
+      <image src="{{item.url}}" mode="scaleToFill" />
+      <text class="subheadingItemText">{{item.text}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+
+<view class="back"></view>
+<view class="introduce" wx:for="{{list}}" wx:key="{{item.id}}">
+<view class="title">
+{{item.title}}
+</view>
+<view class="time">
+{{item.time}}
+</view>
+<view class="p_1 back">
+  {{item.p_1}}
+</view>
+<view class="subTitle">
+  {{item.subtitle_1}}
+</view>
+<view class="p_1">
+  {{item.p_2}}
+</view>
+<view class="subTitle">
+  {{item.subtitle_2}}
+</view>
+<view class="p_1">
+  {{item.p_3}}
+</view>
+<view class="subTitle">
+  {{item.subtitle_3}}
+</view>
+<view class="p_1">
+  {{item.p_4}}
+</view>
+<view class="img">
+<image src="{{item.img}}" mode="widthFix"/>
+</view>
+</view>

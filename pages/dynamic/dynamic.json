@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "dynamic-Tag":"/components/dynamic/Tag/index"
+  },
+  "navigationBarTitleText": "茶圈",
+  "onReachBottomDistance": 50
+}

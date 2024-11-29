@@ -1,0 +1,24 @@
+<!-- 导航栏 -->
+<view class="nav">
+<view class="text"><text>官方直营 正品保障</text></view>
+<view class="icon">
+<navigator url="/memberPages/pages/cart/cart">
+<image src="/static/member-nav-icon/购物车.png" mode="widthFix"/>
+</navigator>
+<navigator url="/pages/user/user" open-type="switchTab" >
+  <image src="/static/member-nav-icon/我的.png" mode="widthFix"/>
+</navigator>
+<navigator url="/memberPages/pages/classify/classify" >
+  <image src="/static/member-nav-icon/分类.png" mode="widthFix"/>
+</navigator>
+</view>
+</view>
+
+<!-- 搜索框 -->
+<van-sticky>
+  <van-search
+  value="{{ value }}"
+  input-align="center"
+  placeholder="请输入搜索关键词"
+/>
+</van-sticky>

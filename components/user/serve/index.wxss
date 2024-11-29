@@ -1,0 +1,9 @@
+.text{
+  display: block;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 30rpx;
+  width: 100%;
+  background-color: #fff;
+  font-weight: 600;
+}

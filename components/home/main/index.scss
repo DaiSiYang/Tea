@@ -1,0 +1,156 @@
+
+page{
+font-family: "宋体";
+}
+.directory{
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-evenly;
+  margin-top: 20rpx;
+
+  width: 100%;
+  height: 350rpx;
+  background-color: #fff;
+  .directoryItem{
+    position: relative;
+    margin-top: 20rpx;
+    width: 170rpx;
+    height: 300rpx;
+    overflow: hidden;
+  image{
+    width: 170rpx;
+    height: 300rpx;
+  }
+  .Masks{
+    position: absolute;
+    top: 0;
+    width: 170rpx;
+    height: 300rpx;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+  }
+  .text{
+    position: absolute;
+    display: flex;
+    top: 80rpx;
+    left: 10rpx;
+    width: 150rpx;
+    height: 150rpx;
+    font-family: "宋体";
+    .left{
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      width: 50%;
+      height: 150rpx;
+      writing-mode: vertical-lr;
+      border-right: 1rpx solid #fff;
+
+        .leftText{
+          color: #fff;
+          letter-spacing: 2px;
+
+        }
+   
+    }
+    .right{
+      width: 50%;
+      height: 150rpx;
+      writing-mode: vertical-lr;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      letter-spacing: 2px;
+      .rightText{
+        color: #fff;
+        margin-left: 10rpx;
+      }
+    }
+  }
+  }
+}
+.history{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 500rpx;
+  background-color:#fff;
+  .title{
+    width: 100%;
+    height: 70rpx;
+    line-height: 70rpx;
+
+    font-weight: 800;
+    text-align: center;
+.titleText{
+  border-right: 1rpx solid #000;
+  border-left: 1rpx solid #000;
+  padding: 0 10rpx;
+}
+}
+  .subheading{
+    width: 100%;
+    height: 50rpx;
+    color: #7c889c;
+    text-align: center;
+    font-size: 25rpx;
+    margin: 15rpx 0;
+  }
+  .subheadingItem{
+    margin-bottom: 20rpx;
+    width: 100%;
+    height: 300rpx;
+    display: flex;
+     align-items: center;
+    padding: 20rpx;
+    box-sizing: border-box;
+    .right{
+      width: 17%;
+      height: 300rpx;
+      background-color: #e2e2e4;
+      display: flex;
+      align-items: center;
+      padding: 10rpx;
+      box-sizing: border-box;
+      .dynasty{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50rpx;
+        width: 100rpx;
+        height: 100rpx;
+        border-radius: 50%;
+        border: 1px solid #000;
+  
+      .iconfont{
+        font-size: 50rpx;
+      }
+      }
+    }
+   
+    .left{
+      display: flex;
+      width: 85%;
+      height: 300rpx;
+      overflow: hidden;
+      position: relative;
+      image{
+        width: 100%;
+        margin-top: -80rpx;
+        opacity: 0.5;
+        z-index: 0;
+      }
+      .subheadingItemText{
+        height: 300rpx;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0rpx;
+        padding: 20rpx;
+        box-sizing: border-box;
+
+       width: 600rpx;
+        line-height: 2;
+        
+      }
+    }
+  }
+}

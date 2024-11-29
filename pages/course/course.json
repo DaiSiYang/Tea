@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "course-tab":"/components/course/tab/index",
+    "coures-main":"/components/course/main/index",
+    "coures-banner":"/components/course/banner/index"
+  },
+  "navigationBarTitleText": "课程"
+}

@@ -1,0 +1,12 @@
+<!-- 招聘广告 -->
+<!-- <user-notice></user-notice> -->
+<!-- Info -->
+<user-panel></user-panel>
+<!-- <user-info></user-info> -->
+<!-- 订单 -->
+<!-- <user-orders></user-orders> -->
+<!-- 推荐服务 -->
+<user-recommend></user-recommend>
+<!-- 更多服务 -->
+<!-- <user-serve></user-serve> -->
+<user-bottom></user-bottom>

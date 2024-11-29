@@ -1,0 +1,14 @@
+<swiper
+    indicator-dots="true"   
+    autoplay="true"   
+    interval="3000"   
+    duration="500"   
+    circular="true"  
+    indicator-color="#000"  
+    indicator-active-color="green"
+    class="banner"  
+> 
+  <swiper-item wx:for="{{imageList}}" wx:key="id">
+    <image src="{{item.url}}" mode="heightFix"/>
+  </swiper-item>
+</swiper>

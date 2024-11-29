@@ -1,0 +1,99 @@
+.sidebar{
+  position: static;
+  top: 0;
+  left: 0;
+}
+.Box{
+ position: absolute;
+ 
+//  padding: 20rpx;
+ top: 0;
+ right: 0;
+  width: 80%;
+  height: 3200rpx;
+  background-color: rgb(236, 232, 232);
+  .BoxItem{
+    position: relative;
+    padding: 20rpx;
+    width: 100%;
+    background-color: #fff;
+    height: 300rpx;
+    margin-bottom: 20rpx;
+    // background-color: blanchedalmond;
+    image{
+      float: left;
+      border-radius: 10rpx;
+      margin-top: 25rpx;
+      width: 250rpx;
+      height: 250rpx;
+      margin-right: 15rpx;
+    }
+    .content{
+      width: 320rpx;
+      font-weight: 530;
+      font-size: 25rpx;
+      position: absolute;
+      top: 60rpx;
+      margin-left: 5rpx;
+    }
+    .unit{
+      position: absolute;
+      top: 163rpx;
+      left: 275rpx;
+      font-size: 25rpx;
+      color: #ff6200;
+      font-weight: 700  ;
+      margin-left: 10rpx;
+    }
+    .price{
+      font-size: 30rpx;
+      
+    }
+    .Number{
+      
+      position: absolute;
+      top: 173rpx;
+      left: 405rpx;
+      font-size: 20rpx;
+      color: #50607A;
+    }
+    .addres{
+      
+      position: absolute;
+      font-size: 23rpx;
+      top: 170rpx;
+      left: 525rpx;
+      color: #50607A;
+    }
+    .stages{
+      margin-left: 10rpx;
+      font-size: 20rpx;
+      position: absolute;
+      top: 210rpx;
+      left: 275rpx;
+      font-size: 25rpx;
+      color: #ff6200;
+    }
+    .shop{
+      margin-left: 10rpx;
+      font-size: 20rpx;
+      position: absolute;
+      top: 250rpx;
+      left: 275rpx;
+      font-size: 25rpx;
+      color: #50607A;
+    }
+  }
+}
+// .oneBox{
+//   // background-color: aqua;
+// }
+// .twoBox{
+//   // background-color: aquamarine;
+// }
+// .thereBox{
+//   // background-color: beige;
+// }
+// .foreBox{
+//   // background-color: blanchedalmond;
+// }

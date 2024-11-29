@@ -1,0 +1,8 @@
+<view class="tab">
+<view class="item" wx:for="{{itemList}}" wx:key="{{index}}" bind:tap="clickItem"
+  data-index="{{index}}"s>
+  <view class=".iconfont .{{item.iconfont}}"
+  ></view>
+  <text>{{item.text}}</text>
+</view>
+</view>

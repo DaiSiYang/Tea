@@ -1,0 +1,10 @@
+<van-tabs active="b">
+  <van-search
+  value="{{ value }}"
+  input-align="center"
+  placeholder="搜索用户备注或名字"
+/>
+  <van-tab title="关注" name="b"><concern></concern></van-tab>
+  <van-tab title="粉丝" name="c"><fans></fans></van-tab>
+</van-tabs>
+

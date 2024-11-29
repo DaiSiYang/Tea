@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "home-banner":"/components/home/banner/index",
+    "home-main":"/components/home/main/index"
+  }
+}

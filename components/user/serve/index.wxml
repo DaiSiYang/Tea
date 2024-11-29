@@ -1,0 +1,27 @@
+<view class="text">更多服务</view>
+<van-collapse accordion value="{{ activeName }}" bind:change="onChange">
+  <van-collapse-item title="我的成就" name="1" icon="/static/userIcon/我的成就.png">
+    目前没有成就
+  </van-collapse-item>  
+  <van-collapse-item title="兑换中心" name="2" icon="/static/userIcon/兑换中心.png">
+    没有可兑换的商品
+  </van-collapse-item>
+  <van-collapse-item title="赠送记录" name="3" icon="/static/userIcon/赠送记录.png">
+    暂时没有赠送记录
+  </van-collapse-item>
+  <van-collapse-item title="收货地址" name="4" icon="/static/userIcon/收获地址.png">
+    请填写收货地址
+  </van-collapse-item>
+  <!-- <van-collapse-item title="关怀模式" name="5" icon="/static/userIcon/关怀模式.png">
+    不可开启
+  </van-collapse-item> -->
+  <!-- <van-collapse-item title="商家隐私声明" name="6" icon="/static/userIcon/商家.png">
+    此小程序开发者最帅
+  </van-collapse-item> -->
+  <van-collapse-item title="联系客服" name="7" icon="/static/userIcon/客服.png">
+    小本程序展示没有客服，大学生可应聘，一月100
+  </van-collapse-item>
+  <van-collapse-item title="设置" name="8" icon="/static/userIcon/设置.png">
+    此小程序不允许更改设置
+  </van-collapse-item>
+</van-collapse>

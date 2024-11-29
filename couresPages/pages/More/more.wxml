@@ -1,0 +1,14 @@
+<view class="title">
+<text class="hot">全部课程</text>
+</view>
+<view class="item" wx:for="{{itemList}}" wx:key="{{index}}">
+<view class="name">
+<text class="title">{{item.text}}</text>
+<view class="price"><view class="unit">￥</view>{{item.price}}</view>
+</view>
+<view class="subtitle">立享趣味线下课程，学习两天一夜</view>
+<view class="bottom">
+<text>现在购买，{{item.day}}开课</text>
+<view bind:tap="onPurchase" data-id="{{item.id}}">立即购买</view>
+</view>
+</view>

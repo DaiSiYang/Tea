@@ -1,0 +1,19 @@
+
+<van-search
+  value="{{ value }}"
+  input-align="center"
+  placeholder="请输入搜索关键词"
+/>
+
+
+<van-tabs active="{{ active }}">
+  <van-tab title="红茶"><red-Tea></red-Tea></van-tab>
+  <van-tab title="白茶"><white-Tea></white-Tea></van-tab>
+  <van-tab title="岩茶"><cliff-Tea></cliff-Tea></van-tab>
+  <van-tab title="黄茶"><Rock-Tea></Rock-Tea></van-tab>
+  <van-tab title="黑茶"><blackTea></blackTea></van-tab>
+  <van-tab title="青茶"><cyanTea></cyanTea></van-tab>
+  <van-tab title="绿茶"><greenTea></greenTea></van-tab>
+  <van-tab title="普洱茶"><puer-Tea></puer-Tea></van-tab>
+
+</van-tabs>

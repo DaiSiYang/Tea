@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+
+  }
+}

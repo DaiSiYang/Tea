@@ -1,0 +1,41 @@
+<!-- <view class="element" wx:for="{{list}}" wx:key="{{item.id}}">
+<view class="title">{{item.title}}的功效</view>
+<view class="text">{{item.text}}</view>
+</view>
+<view class="square"></view> -->
+
+<view bind:tap="clickTea" data-id="{{id_1}}" class="item">
+<image src="https://imgs.699pic.com/images/600/200/574.jpg!list1x.v2" mode=""/>
+<view class="introduce">
+<view class="text">白茶的药效性能很好。 具有解酒醒酒、清热润肺、平肝益血、消炎解毒、降压减脂、消除疲劳等功效</view>
+<view class="title">白茶</view>
+</view>
+</view>
+<view  bind:tap="clickTea" data-id="{{id_2}}" class="item">
+  <view class="introduce">
+<view class="text">黑茶中含有多糖、茶氨酸、茶红素、茶黄素等成分，一般具有降血糖、减肥瘦身、杀菌消炎、利尿解毒、美容养颜等功效与作用</view>
+<view class="title">黑茶</view>
+</view>
+<image src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/bCIdCwFyxeKiccflU5uTsPRSdKhMmeXggvHlgibZP4BaMNT4vV1wC2jTSQAtrxzvPUqsAh6qCIOhsrv0aRQK50JA/640?wx_fmt=jpeg&from=appmsg" mode=""/>
+</view>
+<view  bind:tap="clickTea" data-id="{{id_3}}" class="item">
+<image src="https://t14.baidu.com/it/u=3213045093,3654523616&fm=224&app=112&size=w931&n=0&f=JPEG&fmt=auto?sec=1732813200&t=758f595342a5f0004420b74cdc6fd009" mode=""/>
+<view class="introduce">
+<view class="text">红茶一般具有提神醒脑、促进新陈代谢、强壮骨骼、补充营养、减肥等功效与作用,平时可适量饮用</view>
+<view class="title">红茶</view>
+</view>
+</view>
+<view  bind:tap="clickTea" data-id="{{id_4}}" class="item">
+  <view class="introduce">
+<view class="text">岩茶是我国的一种名茶，一般产于福建武夷山的岩缝中，故名岩茶。岩茶是一种半发酵的茶，茶叶的香气由清香转化成了果香，以“岩骨花香”的独特岩韵著称</view>
+<view class="title">岩茶</view>
+</view>
+<image src="https://images.pexels.com/photos/227908/pexels-photo-227908.jpeg?auto=compress&cs=tinysrgb&w=600" mode=""/>
+</view>
+<view  bind:tap="clickTea" data-id="{{id_5}}" class="item">
+<image src="https://cdn.pixabay.com/photo/2021/12/05/13/57/puer-tea-6847808_640.jpg" mode=""/>
+<view class="introduce">
+<view class="text">普洱茶是云南独有大叶种茶树所产的茶，其饮用方法异常丰富，具有降脂、减肥、养颜、降压、健齿护齿、延缓衰老等功效</view>
+<view class="title">普洱茶</view>
+</view>
+</view>

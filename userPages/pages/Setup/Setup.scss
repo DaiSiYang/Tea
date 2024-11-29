@@ -1,0 +1,19 @@
+/* userPages/pages/Setup/Setup.wxss */
+.text{
+  margin: 20rpx;
+  font-size: 25rpx;
+  color: rgb(194, 197, 197);
+}
+.center{
+  margin-top: 10rpx;
+  width: 100%;
+  .centeritem{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 80rpx;
+    background-color: #fff;
+    align-items: center;
+    margin-bottom: 10rpx;
+  }
+}

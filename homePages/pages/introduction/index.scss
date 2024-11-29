@@ -1,0 +1,33 @@
+
+.img{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+}
+.img image{
+  height: 1200rpx;
+  width: 700rpx;
+}
+.item{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  .title{
+    font-size: 60rpx;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40rpx;
+  }
+  .text{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    height: 750rpx;
+    text-align: center;
+    font-size: 34rpx;
+  }
+}

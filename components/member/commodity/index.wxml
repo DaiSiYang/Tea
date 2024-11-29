@@ -1,0 +1,16 @@
+<view class="commodity">
+<view class="commodityItem" wx:for="{{commodityItemList}}" wx:key="id">
+<image src="{{item.url}}" mode="heightFix"/>
+<view class="box">
+  <view class="introduce">
+  {{item.text}}
+</view>
+<view class="price">
+<view class="rmb">￥</view>
+<text>{{item.price}}</text>
+</view>
+<view class="sell">{{item.sell}}万+售出 <text>{{item.selltext}}复购</text></view>
+<view class="StoreName">{{item.storename}}<text>进店 ></text></view>
+</view>
+</view>
+</view>

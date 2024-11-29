@@ -1,0 +1,8 @@
+.handoff image{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  z-index: 10;
+  top: 10rpx;
+  left: 350rpx;
+}

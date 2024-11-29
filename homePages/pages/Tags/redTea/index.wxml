@@ -1,0 +1,29 @@
+<view class="tea" wx:for="{{TeaList}}" wx:key="{{index}}">
+  <swiper
+    indicator-dots="true"   
+    autoplay="true"   
+    interval="3000"   
+    duration="500"   
+    circular="true"  
+    indicator-color="#fff"  
+    indicator-active-color="#000"
+    class="banner"  
+> 
+  <swiper-item wx:for="{{item.TeaList_1}}" wx:key="{{index}}">
+    <image src="{{item.url}}" mode="widthFix"/>
+  </swiper-item>
+</swiper>
+<view class="historical">
+<text class="title_1">历史背景</text>
+<view class="text">{{item.background}}</view>
+<text class="title_3">成分与健康益处</text>
+<view class="text">{{item.ingredients}}</view>
+<text class="title_4">具体品种</text>
+<view class="text">{{item.variety}}</view>
+<text class="title_5">品鉴方法</text>
+<view class="text">
+  {{item.Tasting}}
+</view>
+</view>
+
+</view>

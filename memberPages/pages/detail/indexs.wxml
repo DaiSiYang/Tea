@@ -1,0 +1,48 @@
+
+
+<view class="item" wx:for="{{list}}" wx:key="{{item.id}}">
+<!-- 图片 -->
+  <view class="img">
+    <image src="{{item.url}}" mode="scaleToFill"/>
+  </view>
+  <!-- 价格and状态 -->
+  <view class="state">
+  <view class="price"><text>￥</text>{{item.price}}</view>
+  <view class="state_1">未拍出</view>
+  </view>
+  <!-- title -->
+  <view class="title_1">
+  <view class="title">
+    {{item.text}}
+    <view class="subtitle">
+      珍稀之物，竞拍开启，机会不容错过！
+    </view>
+  </view>
+<view class="box">
+  <image src="/static/HotIcon/转发_2.png" mode=""/>
+    <view>转发</view>
+</view>
+</view>
+<view class="shopper">
+<view class="shopper-img">
+  <image src="/static/member-nav-icon/放心购.png" mode="widthFix"/>
+  <text>放心购</text>
+</view>
+<view class="text">
+  <view>品质保证 售后无忧 坏损无忧</view>
+</view>
+</view>
+<view class="freight">
+<view class="title">运费</view>
+<view class="text">待拍下时确认</view>
+</view>
+</view>
+
+
+<van-goods-action>
+  <van-goods-action-icon icon="chat-o" text="客服" bind:tap="clickCustomer"/>
+  <van-goods-action-icon icon="cart-o" text="购物车" info="5" bind:tap="clickcart"/>
+  <van-goods-action-icon icon="shop-o" text="店铺" bind:tap="clickshop"/>
+  <van-goods-action-button color="#A49A8D" text="加入购物车" type="warning" />
+  <van-goods-action-button color="#494136" text="立即购买" />
+</van-goods-action>

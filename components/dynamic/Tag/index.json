@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "dynamic-concern":"/components/dynamic/concern/index",
+    "dynamic-hot":"/components/dynamic/Hot/inedx"
+  }
+}

@@ -1,0 +1,88 @@
+/* components/dynamic/Hot/inedx.wxss */
+.bck{
+  width: 100%;
+
+}
+.hotItem{
+  padding: 20rpx;
+  margin-top: 10rpx;
+  width: 100%;
+
+  background-color: #fff;
+}
+.info{
+  position: relative;
+  width: 95%;
+  height: 100rpx;
+  /* background-color: beige; */
+}
+.info image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.info .name{
+  position: absolute;
+  top: 10rpx;
+  left: 130rpx;
+  font-size: 28rpx;
+  color: rgb(243, 161, 9);
+}
+.info .actor{
+  position: absolute;
+  top: 60rpx;
+  left: 130rpx;
+  font-size: 20rpx;
+  color: rgb(153, 147, 149);
+}
+.info .concern{
+  display: block;
+  width: 120rpx;
+  height: 50rpx;
+  border-radius:25rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 25rpx;
+  color: rgb(243, 161, 9);
+  border: 1rpx solid rgb(243, 161, 9);
+  position: absolute;
+  right:40rpx;
+  top: 13rpx;
+}
+.text{
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  width: 95%;
+}
+.content{
+  margin-top: 20rpx;
+}
+.content image{
+  width: 170rpx;
+  height: 170rpx;
+  margin-right: 20rpx;
+}
+.bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20rpx;
+  border-top: 1rpx solid rgb(197, 197, 197);
+  width: 95%;
+  height: 60rpx;
+  /* background-color: rgb(255, 255, 255); */
+}
+.flex{
+  display: flex;
+  color: rgb(117, 119, 121);
+  margin-top: 10px;
+}
+.flex image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.flex text{
+ margin-top: 2rpx;
+  font-size: 24rpx;
+}

@@ -1,0 +1,27 @@
+<view class="panel">
+<!-- 背景 -->
+<view class="background">
+<image src="https://img2.baidu.com/it/u=1457016702,3158219550&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1727456400&t=1dd51be354ea09438a0e7573e9ac8203" mode="scaleToFill"/>
+</view>
+<!-- 面板 -->
+<view class="Infobackground"></view>
+<view class="Info">
+  <!-- 头像 -->
+  <button class="avatar" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+  <image  src="{{avatarUrl}}" mode="scaleToFill"/>
+  </button>
+  <!-- 名字 -->
+  <view class="name">
+ <input type="nickname" placeholder="请输入昵称"/>
+  </view>
+  <!-- 动态 关注 粉丝 -->
+  <view class="user">
+  <view wx:for="{{userList}}" wx:key="index" class="userItem">
+
+  <view bind:tap="friend">{{item.num}}</view>
+
+  <view bind:tap="friend">{{item.text}}</view>
+  </view>
+  </view>
+</view>
+</view>

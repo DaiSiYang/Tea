@@ -1,0 +1,89 @@
+/* components/course/main/index.wxss */
+.title{
+  width: 95%;
+  margin: auto;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  .hot{
+    border-left: 5px solid #494136;
+    box-sizing: border-box;
+    padding-left: 15rpx;
+  }
+  .more{
+    width: 120rpx;
+    color: rgb(172, 173, 173);
+    margin-left: 450rpx;
+    font-size: 25rpx;
+  }
+}
+.item{
+  margin-bottom: 20rpx;
+  width: 95%;
+  margin-left: 17rpx;
+  height: 300rpx;
+  background-color: #fff;
+  position: relative;
+  .name{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 40rpx;
+    width: 100%;
+    height: 50rpx;
+    
+.title{
+  margin-left: 40rpx;
+  font-weight: 900;
+}
+.price{
+  display: flex;
+  color: #e63b6e;
+  position: absolute;
+  right: 40rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+  .unit{
+    font-size: 25rpx;
+    margin-top: 9rpx;
+    margin-right: 5rpx;
+  }
+}
+  
+  }
+  .subtitle{
+    position: absolute;
+    left: 40rpx;
+    top: 110rpx;
+    font-size: 26rpx;
+    color: rgb(135, 136, 136);
+    font-weight: 500;
+  }
+  .bottom{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 180rpx;
+    width: 90%;
+    left: 36rpx;
+    height: 100rpx;
+    border-top: 1px solid rgb(238, 235, 235);
+    text{
+      color: rgb(135, 136, 136);
+      font-size: 27rpx;
+    }
+    view{
+      font-size: 20rpx;
+
+      width: 150rpx;
+      height: 60rpx;
+      line-height: 60rpx;
+      background-color: #494136;
+      text-align: center;
+      border-radius: 50rpx;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<view class="commodity">
+<view class="item" wx:for="{{getCommodityList}}" wx:key="{{index}}" bind:tap="clickItem">
+
+
+<!-- 商品图片 -->
+<view class="Image">
+<image src="{{item.url}}" mode="heightFix"/>
+</view>
+
+<!-- 商品内容 -->
+<view class="text">
+  {{item.text}}
+</view>
+
+<!-- 价格 -->
+<view class="price">
+￥<view bind:tap="getCommodityList">{{item.price}}</view>
+</view>
+
+
+</view>
+</view>

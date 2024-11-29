@@ -1,0 +1,29 @@
+<van-collapse accordion value="{{ activeName }}" bind:change="onChange">
+  <van-collapse-item title="账号安全" name="1">
+    账号挺安全的，别瞎操心
+  </van-collapse-item>
+  <van-collapse-item title="关怀模式" name="2">
+    无
+  </van-collapse-item>
+  <van-collapse-item title="帮助与反馈" name="3">
+    无
+  </van-collapse-item>
+</van-collapse>
+
+<view class="text">隐私</view>
+
+<van-collapse accordion value="{{ activeName }}" bind:change="onChange">
+  <van-collapse-item title="朋友权限" name="4">
+    无
+  </van-collapse-item>
+  <van-collapse-item title="个人信息与权限" name="5">
+   无
+  </van-collapse-item>
+  <van-collapse-item title="第三方信息共享清单" name="6">
+  无
+  </van-collapse-item>
+</van-collapse>
+<view class="center">
+<view class="centeritem" bind:tap="handoff" data-handoff="无法切换">切换账号</view>
+<view class="centeritem" bind:tap="exit" data-exit="已退出">退出登入</view>
+</view>

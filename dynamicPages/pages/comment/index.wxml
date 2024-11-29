@@ -1,0 +1,12 @@
+<view class="box" wx:for="{{list}}" wx:key="{{index}}">
+<view class="img">
+<image src="{{item.avatarUrl}}" mode="widthFix"/>
+</view>
+<view class="minbox">
+<text class="name">{{item.name}}</text>
+<view class="text">{{item.text}}</view>
+<view class="time">
+{{item.time}} <text class="address">来自河北</text>
+</view>
+</view>
+</view>

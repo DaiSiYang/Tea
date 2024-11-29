@@ -1,0 +1,7 @@
+<view class="text">我的功能</view>
+<view class="recommend">
+<view class="recommendItem" bind:tap="Jump" data-index="{{index+1}}" wx:for="{{recommendItemList}}" wx:key="index">
+<image class="ItemImage" src="{{item.image}}" mode="scaleToFill"/>
+<text class="ItemText">{{item.text}}</text>
+</view>
+</view>

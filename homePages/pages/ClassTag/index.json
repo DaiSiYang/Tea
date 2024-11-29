@@ -1,0 +1,18 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-search": "@vant/weapp/search/index",
+    "red-Tea":"/homePages/pages/Tags/redTea",
+    "white-Tea":"/homePages/pages/Tags/whiteTea",
+    "cliff-Tea":"/homePages/pages/Tags/cliffTea/index",
+    "Rock-Tea":"/homePages/pages/Tags/RockTea/index",
+    "blackTea":"/homePages/pages/Tags/blackTea/index",
+    "cyanTea":"/homePages/pages/Tags/cyanTea/index",
+    "greenTea":"/homePages/pages/Tags/greenTea/index",
+    "puer-Tea":"/homePages/pages/Tags/puerTea/index"
+  }
+
+}
+

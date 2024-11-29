@@ -1,0 +1,7 @@
+<view class="text">订单</view>
+	<van-grid border:false>
+	  <van-grid-item  icon="/static/userIcon/待付款.png" text="待付款" />
+	  <van-grid-item icon="/static/userIcon/待发货.png" text="待发货" />
+	  <van-grid-item icon="/static/userIcon/已付款.png" text="待收货" />
+	  <van-grid-item icon="/static/userIcon/待评论.png" text="待评价" />
+	</van-grid>

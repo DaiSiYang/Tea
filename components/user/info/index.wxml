@@ -1,0 +1,37 @@
+<view class="info">
+<view class="avatar">
+<!-- 头像 -->
+<image src="https://sns-webpic-qc.xhscdn.com/202410092208/ea5d336aa9433533e50c01e503434605/spectrum/1040g34o318o2unl90o0g5p3es4u46q2bb0kage8!nd_dft_wlteh_webp_3" ></image>
+<!-- 名字 -->
+<view class="name">
+  <text>无敌暴龙战神</text>
+</view>
+<!-- icon -->
+<view class="icon">
+  <image src="/static/userIcon/LV1.png" mode="heightFix"/>
+</view>
+<!-- 正式会员 -->
+<view class="member">
+<text>正式会员</text>
+</view>
+<!-- 金币 -->
+<view class="coins">
+<view>RMB:{{coins}}</view>
+</view>
+</view>
+<!-- 动态，关注，粉丝 -->
+<view class="concern">
+<view class="center">
+<view>{{userDynamicL}}</view>
+<view class="text">动态</view>
+</view>
+<view class="center">
+<view>{{userConcern}}</view>
+<view class="text">关注</view>
+</view>
+<view class="center">
+<view>{{userSomeone}}</view>
+<view class="text">粉丝</view>
+</view>
+</view>
+</view>
