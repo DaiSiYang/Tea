@@ -36,7 +36,7 @@ insert into RECOMMAND (url, text, price) values
 5300
 ),
 (
-'https://pic.taohuren.com/images/article/2024/0812/481945312badde76.png',
+'https://img1.baidu.com/it/u=705630546,1117042472&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1732986000&t=4bfb44b1c6af5c364f8ea1400b8b2d7d',
 '养生名具 - 紫砂壶',
 3300
 ),
@@ -96,3 +96,6 @@ create table cart(
     price int not null
 );
 delete  from cart where id = 1;
+
+DELETE  FROM recommand where id=7;
+update recommand set url = 'https://img1.baidu.com/it/u=705630546,1117042472&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1732986000&t=4bfb44b1c6af5c364f8ea1400b8b2d7d' where id = 7;
