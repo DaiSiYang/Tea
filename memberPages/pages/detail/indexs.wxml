@@ -41,8 +41,8 @@
 
 <van-goods-action>
   <van-goods-action-icon icon="chat-o" text="客服" bind:tap="clickCustomer"/>
-  <van-goods-action-icon icon="cart-o" text="购物车" info="5" bind:tap="clickcart"/>
+  <van-goods-action-icon icon="cart-o" text="购物车"  bind:tap="clickcart"/>
   <van-goods-action-icon icon="shop-o" text="店铺" bind:tap="clickshop"/>
-  <van-goods-action-button color="#A49A8D" text="加入购物车" type="warning" />
+  <van-goods-action-button color="#A49A8D" bind:tap="addList" text="加入购物车" type="warning" />
   <van-goods-action-button color="#494136" text="立即购买" />
 </van-goods-action>

@@ -1,71 +1,72 @@
-// memberPages/pages/cart/cart.js
-import {createStoreBindings} from 
-'mobx-miniprogram-bindings'
-import {store} from '../../../store/idnex'
-import Dialog from '@vant/weapp/dialog/dialog';
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  },
-onequantity(e){
- const count = e.target.dataset.quantity
- this.oneClick(count)
+    count:1,
+    list:[
 
+    ]
   },
-twoquantity(e){
- const count = e.target.dataset.quantity
- this.twoClick(count)
+  getList(){
+    wx.request({
+      url: 'http://127.0.0.1:8080/api/mysql/cart',
+      method:'GET',
+      success:(res)=>{
+        this.setData({
+          list:res.data
+        })
+        console.log(this.data.list);
+      }
+    })
   },
-Threequantity(e){
- const count = e.target.dataset.quantity
- this.ThreeClick(count)
+  add(){
+    this.setData({
+      count:this.data.count += 1
+    })
   },
-Fourquantity(e){
- const count = e.target.dataset.quantity
- this. FourClick(count)
-  },
-  cartClick(){
-    if(store.coins-store.TotalPrice<0){
-      wx.showModal({
-        content: '余额不足，请充值',
-        success (res) {
-          if (res.confirm) {
-           console.log(store.coins);
-           wx.showToast({
-            title: '您的余额为'+store.coins,
-            icon: 'none',
-            duration: 2000
+  sub(id){
+    console.log(id);
+    const itemId = id.currentTarget.dataset.id
+    console.log(itemId);
+    if (this.data.count <= 1) {
+     wx.showModal({
+       title:'确定删除该商品吗',
+       content: '您确定要执行此操作吗？',
+       success:(res)=>{
+        if (res.confirm) {
+          wx.request({
+            url: `http://127.0.0.1:8080/api/mysql/cart/${itemId}`,
+            method:'DELETE',
+            success:(res)=>{
+              wx.showToast({
+                title: '删除成功',
+              })
+              console.log(res);
+            },
+            fail:(err)=>{
+              wx.showToast({
+                title: '删除失败',
+              })
+            }
           })
-          } else if (res.cancel) {
-            console.log('用户点击取消')
+       } else if (res.cancel) {
+          console.log('用户取消了操作');
           }
-        }
-      })
-    }else{
-      // wx.showToast({
-      //   title: '支付成功，您的余额为'+store.coins,
-      //   icon: 'none',
-      //   duration: 2000
-      // })
-      wx.showModal({
-        content: '支付成功，您的余额为'+(store.coins-store.TotalPrice)
-      })
+       }
+     })
+      return
     }
-   
+    this.setData({
+      count:this.data.count-=1
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.storeBindings = createStoreBindings(this,{
-      store,
-      fields:['onePrice','oneNum','oneSum','twoPrice','twoNum','twoSum','ThreePrice','ThreeNum','ThreeSum','FourPrice','FourNum','FourSum','TotalPrice','coins'],
-      actions:['oneClick','twoClick','ThreeClick','FourClick']
-    })
+   this.getList()
   },
 
   /**
@@ -93,7 +94,7 @@ Fourquantity(e){
    * 生命周期函数--监听页面卸载
    */
   onUnload() {
-    this.storeBindings.destroyStoreBindings()
+
   },
 
   /**

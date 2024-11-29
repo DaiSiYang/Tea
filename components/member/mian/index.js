@@ -74,14 +74,18 @@ Component({
           this.setData({
             list:res.data
           })
+         
         }
       })
     },
     clickMain(id){
       const itemTd = id.currentTarget.dataset.id
-      console.log(itemTd);
+      const item = this.data.list.find(item=>item.id == itemTd)
+      const {url ,text , price} = item
+      console.log(url , text , price);
       wx.navigateTo({
-        url: `/memberPages/pages/detail/indexs?id=${itemTd}`,
+        url: `/memberPages/pages/detail/indexs?id=${itemTd}&url=${url}
+        &text=${text}&price=${price}`,
       })
     }
   },

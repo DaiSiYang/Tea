@@ -6,7 +6,33 @@ Page({
    */
   data: {
     id:'',
-    list:[]
+    list:[],
+    url:'',
+    price:'',
+    title:''
+  },
+  addList(){
+    wx.request({
+      url: 'http://127.0.0.1:8080/api/cart/add',
+      method:'POST',
+      data:{
+        url:this.data.url,
+        title:this.data.text,
+        price:this.data.price,
+      },
+      success:(res)=>{
+        wx.showToast({
+          title: '加入成功',
+          icon:'success'
+        })
+      },
+      fail:(err)=>{
+        wx.showToast({
+          title: '添加失败',
+          icon:'success'
+        })
+      }
+    })
   },
   clickCustomer(){
     wx.navigateTo({
@@ -41,9 +67,14 @@ getList(){
    */
   onLoad(options) {
     this.setData({
-      id:options.id
+      id:options.id,
+      url:options.url,
+      text:options.text,
+      price:options.price
     })
     this.getList()
+    console.log(options.url,options.text,options.price);
+   
   },
 
   /**

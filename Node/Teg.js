@@ -1,5 +1,6 @@
 const express = require('express')
 const mysql = require('mysql')
+const bodyParser = require('body-parser');
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -230,7 +231,7 @@ const courseMore = [
 ]
 
 app.use(cors())
-
+app.use(bodyParser.json());
 // member
 app.get('/api/member/falseMain', (req, res) => {
 
@@ -392,6 +393,32 @@ app.get('/api/mysql/memberHot/:id',(req,res)=>{
     const id = parseInt(req.params.id)
     const sql = 'SELECT * FROM memberHot where id=?';
     db.query(sql , id, (err, result) => {
+        if (err) throw err;
+        res.status(200).json(result)
+    })
+})
+app.post('/api/cart/add', (req, res) => {
+    const { url,title,price } = req.body;
+
+    const sql = 'INSERT INTO cart (url,title,price) VALUES (?, ?, ?)';
+    db.query(sql, [url,title,price], (err, result) => {
+        if (err) {
+            return res.status(500).send('Error adding to cart');
+        }
+        res.status(200).send({ message: 'Item added to cart', cartId: result.insertId });
+    });
+});
+app.get('/api/mysql/cart',(req,res)=>{
+  const sql = 'select * from cart';
+  db.query(sql , (err, result) => {
+      if (err) throw err;
+      res.status(200).json(result)
+  })
+})
+app.delete('/api/mysql/cart/:id',(req,res)=>{
+    const id = parseInt(req.params.id)
+    const sql = 'DELETE FROM cart WHERE id=?';
+    db.query(sql , id,(err, result) => {
         if (err) throw err;
         res.status(200).json(result)
     })

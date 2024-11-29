@@ -1,66 +1,29 @@
-<!-- 购物车 -->
-<van-card
-  num="{{oneNum}}"
-  tag="特价"
-  origin-price="40"
-  price="{{oneSum}}"
-  desc="高档轻奢懒人自动整套功夫茶具套装2024新款茶杯家用送礼泡茶器具"
-  title="轻奢茶具套装"
-  thumb="https://g-search2.alicdn.com/img/bao/uploaded/i4/i3/2212887368759/O1CN01rhdSAe2EZg3IvYTXG_!!0-item_pic.jpg_580x580q90.jpg_.webp"
->
-  <view slot="footer">
-    <van-button size="mini" bind:tap="onequantity" data-quantity="{{1}}">+1</van-button>
-    <van-button size="mini" bind:tap="onequantity" data-quantity="{{-1}}">-1</van-button>
-  </view>
-</van-card>
-<van-card
-  num="{{twoNum}}"
-  tag="6折"
-  
-  origin-price="400"
-  price="{{twoSum}}"
-  desc="新乾堂陶瓷高档功夫茶具套装2024新款德化白瓷高端礼品冰种羊脂玉"
-  title="档功夫茶具套装"
-  thumb="http://img.alicdn.com/img/i3/45847900/O1CN017WHv8I28EFucoabZc_!!0-saturn_solar.jpg_580x580q90.jpg_.webp"
->
-  <view slot="footer">
-    <van-button size="mini" bind:tap="twoquantity" data-quantity="{{1}}">+1</van-button>
-    <van-button size="mini" bind:tap="twoquantity" data-quantity="{{-1}}" >-1</van-button>
-  </view>
-</van-card>
-<van-card
-  num="{{ThreeNum}}"
-  tag="特价"
-  origin-price="4000"
-  price="{{ThreeSum}}"
-  desc="斐克利亚花梨实木茶盘全自动一体办公室茶台高端茶具套装家用礼品"
-  title="办公室茶台高端茶具套装家用礼品"
-  thumb="https://picasso.alicdn.com/imgextra/O1CNA1GRWDhg2KyJ7iMlcys_!!2215022559625-0-psf.jpg_580x580q90.jpg_.webp"
->
-  <view slot="footer">
-    <van-button size="mini" bind:tap="Threequantity" data-quantity="{{1}}">+1</van-button>
-    <van-button size="mini" bind:tap="Threequantity" data-quantity="{{-1}}" >-1</van-button>
-  </view>
-</van-card>
-<van-card
-  num="{{FourNum}}"
-  tag="半价"
-  origin-price="200"
-  price="{{FourSum}}"
-  desc="水墨风琉璃功夫茶具套装家用轻奢高档白玉泡茶壶2024新款盖碗茶杯"
-  title="水墨风琉璃功夫茶具套装"
-  thumb="https://gw.alicdn.com/imgextra/O1CN01hbCuHM1h1tayudql2_!!2206584264218-0-C2M.jpg_580x580q90.jpg_.webp"
->
-  <view slot="footer">
-    <van-button size="mini" bind:tap="Fourquantity" data-quantity="{{1}}">+1</van-button>
-    <van-button size="mini" bind:tap="Fourquantity" data-quantity="{{-1}}" >-1</van-button>
-  </view>
-</van-card>
-
+<view class="cart" wx:if="{{list.length == 0}}">
+<image src="/static/member/空购物车.jpg" mode=""/>
+</view>
+<view  wx:else="{{list.length >= 1}}">
+<view class="item" wx:for="{{list}}" wx:key="{{item.id}}">
+<view class="img">
+<image src="{{item.url}}" mode="widthFix"/>
+</view>
+<view class="right">
+<view class="title">{{item.title}}</view>
+<view class="text">愿您每一次购物都能发现惊喜</view>
+<view class="price"><text>￥</text>{{item.price}}</view>
+<view class="compute">
+  <view class="sub" bind:tap="sub" data-id="{{item.id}}">-</view>
+<input type="text" value="{{count}}"/>
+<view class="add" bind:tap="add">+</view>
+</view>
+</view>
 <!-- 提交订单 -->
 <van-submit-bar
-  price="{{ TotalPrice*100 }}"
+  price="{{10000}}"
   decimal-length="0"
   button-text="提交订单"
   bind:tap="cartClick"
 />
+</view>
+</view>
+
+
