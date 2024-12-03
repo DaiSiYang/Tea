@@ -84,8 +84,8 @@ Component({
       const {url ,text , price} = item
       console.log(url , text , price);
       wx.navigateTo({
-        url: `/memberPages/pages/detail/indexs?id=${itemTd}&url=${url}
-        &text=${text}&price=${price}`,
+        //encodeURIComponent(url)
+        url: `/memberPages/pages/detail/indexs?id=${itemTd}&url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}&price=${encodeURIComponent(price)}`,
       })
     }
   },

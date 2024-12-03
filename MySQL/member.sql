@@ -92,7 +92,7 @@ insert into memberHot (url, text, price) values
 create table cart(
     id int primary key auto_increment,
     url varchar(555) not null ,
-    title varchar(555) not null ,
+    text varchar(555) not null ,
     price int not null
 );
 delete  from cart where id = 1;

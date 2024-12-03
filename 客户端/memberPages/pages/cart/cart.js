@@ -4,10 +4,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    count:1,
     list:[
 
-    ]
+    ],
+    totalPrice:0
+  },
+  countListPrice(){
+    let itemtotalPrice = this.data.list.reduce((sum,item)=>{
+      return sum + (item.price*item.count)
+    },0)
+    this.setData({
+      totalPrice:itemtotalPrice
+    })
   },
   getList(){
     wx.request({
@@ -15,22 +23,28 @@ Page({
       method:'GET',
       success:(res)=>{
         this.setData({
-          list:res.data
+          list:res.data.map(item=>({...item,count:1}))
         })
-        console.log(this.data.list);
+        this.countListPrice()
       }
     })
   },
-  add(){
-    this.setData({
-      count:this.data.count += 1
-    })
+  add(id){
+    const itemId = id.currentTarget.dataset.id
+    const item = this.data.list.find(item=>item.id == itemId)
+    if(item){
+      item.count += 1
+      this.setData({
+        list:[...this.data.list]
+      })
+    }
+    this.countListPrice()
   },
   sub(id){
-    console.log(id);
     const itemId = id.currentTarget.dataset.id
-    console.log(itemId);
-    if (this.data.count <= 1) {
+    const item = this.data.list.find(item=>item.id == itemId)
+    console.log(item);
+    if (item.count <= 1) {
      wx.showModal({
        title:'确定删除该商品吗',
        content: '您确定要执行此操作吗？',
@@ -44,6 +58,8 @@ Page({
                 title: '删除成功',
               })
               console.log(res);
+
+              this.getList()
             },
             fail:(err)=>{
               wx.showToast({
@@ -58,9 +74,13 @@ Page({
      })
       return
     }
-    this.setData({
-      count:this.data.count-=1
-    })
+    if(item){
+      item.count -= 1
+      this.setData({
+        list:[...this.data.list]
+      })
+    }
+    this.countListPrice()
   },
   /**
    * 生命周期函数--监听页面加载

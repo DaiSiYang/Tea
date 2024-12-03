@@ -9,7 +9,7 @@ Page({
     list:[],
     url:'',
     price:'',
-    title:''
+    text:''
   },
   addList(){
     wx.request({
@@ -17,7 +17,7 @@ Page({
       method:'POST',
       data:{
         url:this.data.url,
-        title:this.data.text,
+        text:this.data.text,
         price:this.data.price,
       },
       success:(res)=>{
@@ -68,9 +68,9 @@ getList(){
   onLoad(options) {
     this.setData({
       id:options.id,
-      url:options.url,
-      text:options.text,
-      price:options.price
+      url:decodeURIComponent(options.url),
+      text:decodeURIComponent(options.text),
+      price:decodeURIComponent(options.price)
     })
     this.getList()
     console.log(options.url,options.text,options.price);

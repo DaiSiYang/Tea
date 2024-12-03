@@ -398,10 +398,10 @@ app.get('/api/mysql/memberHot/:id',(req,res)=>{
     })
 })
 app.post('/api/cart/add', (req, res) => {
-    const { url,title,price } = req.body;
+    const { url,text,price } = req.body;
 
-    const sql = 'INSERT INTO cart (url,title,price) VALUES (?, ?, ?)';
-    db.query(sql, [url,title,price], (err, result) => {
+    const sql = 'INSERT INTO cart (url,text,price) VALUES (?, ?, ?)';
+    db.query(sql, [url,text,price], (err, result) => {
         if (err) {
             return res.status(500).send('Error adding to cart');
         }

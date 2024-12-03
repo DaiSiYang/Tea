@@ -7,18 +7,18 @@
 <image src="{{item.url}}" mode="widthFix"/>
 </view>
 <view class="right">
-<view class="title">{{item.title}}</view>
+<view class="title">{{item.text}}</view>
 <view class="text">愿您每一次购物都能发现惊喜</view>
 <view class="price"><text>￥</text>{{item.price}}</view>
 <view class="compute">
   <view class="sub" bind:tap="sub" data-id="{{item.id}}">-</view>
-<input type="text" value="{{count}}"/>
-<view class="add" bind:tap="add">+</view>
+<input type="text" value="{{item.count}}"/>
+<view class="add" bind:tap="add" data-id="{{item.id}}">+</view>
 </view>
 </view>
 <!-- 提交订单 -->
 <van-submit-bar
-  price="{{10000}}"
+  price="{{totalPrice*100}}"
   decimal-length="0"
   button-text="提交订单"
   bind:tap="cartClick"

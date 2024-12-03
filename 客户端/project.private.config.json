@@ -23,6 +23,20 @@
           "scene": null
         },
         {
+          "name": "pages/member/member",
+          "pathName": "pages/member/member",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "memberPages/pages/cart/cart",
+          "pathName": "memberPages/pages/cart/cart",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "memberPages/pages/detail/indexs",
           "pathName": "memberPages/pages/detail/indexs",
           "query": "id=1",
