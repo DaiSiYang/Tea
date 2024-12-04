@@ -1,14 +1,22 @@
-<view class="chat-box">
-  <scroll-view scroll-y class="chat-content" scroll-top="{{scrollTop}}">
-    <view wx:for="{{messages}}" wx:key="id" class="message-item {{item.from}}">
-      <view class="message-bubble">
-        <text>{{item.text}}</text>
+<view class="chat-container">
+  <!-- 聊天内容区域 -->
+  <scroll-view class="chat-box" scroll-y="true" scroll-into-view="{{toView}}">
+    <block wx:for="{{messages}}" wx:key="id">
+      <view class="chat-item {{item.type === 'user' ? 'user' : 'agent'}}">
+        <image class="avatar" src="{{item.avatar}}" />
+        <view class="message-bubble">{{item.content}}</view>
       </view>
-    </view>
+    </block>
   </scroll-view>
-  
-  <view class="input-container">
-    <input type="text" bindinput="onInput" value="{{inputMessage}}" placeholder="请输入问题" class="input-box" />
-    <button bindtap="sendMessage" class="send-btn">发送</button>
+
+  <!-- 输入框区域 -->
+  <view class="input-box">
+    <input 
+      class="input" 
+      placeholder="请输入消息..." 
+      bindinput="handleInput" 
+      value="{{inputValue}}"
+    />
+    <button class="send-button" bindtap="sendMessage">发送</button>
   </view>
 </view>

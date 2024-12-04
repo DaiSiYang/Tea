@@ -16,6 +16,20 @@
           "scene": null
         },
         {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "userPages/pages/Customer/index",
+          "pathName": "userPages/pages/Customer/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/member/member",
           "pathName": "pages/member/member",
           "query": "",

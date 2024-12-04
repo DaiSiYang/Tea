@@ -1,50 +1,82 @@
 Page({
   data: {
-    messages: [],   // 消息列表
-    inputMessage: '',  // 用户输入
-    scrollTop: 0  // 控制滚动条位置
+    messages: [
+      { id: 1, type: 'agent', avatar: 'https://i.pinimg.com/236x/37/f8/2d/37f82d5a37d07f1abb4f31f2daeacb9f.jpg', content: '您好，有什么可以帮您？' },
+    ],
+    inputValue: '',
+    toView: '',
+    autoReplyMap: {
+      '营业时间': '我们的营业时间是每天早上8点到晚上10点。',
+      '价格': '我们的商品价格根据种类不同，请参见小程序内的商品详情。',
+      '茶叶种类': '我们提供绿茶、红茶、乌龙茶等多种选择。',
+      '退货':'亲，国内暂不支持退货，请去阿富汗线下店进行售后',
+      '你好':'在的,亲'
+    },
   },
 
-  // 输入框内容变化时更新
-  onInput: function (e) {
+  // 处理输入框输入
+  handleInput(e) {
     this.setData({
-      inputMessage: e.detail.value
+      inputValue: e.detail.value,
     });
   },
 
   // 发送消息
-  sendMessage: function () {
-    const message = this.data.inputMessage.trim();
-    if (message) {
-      this.addMessage('用户', message);
-      this.setData({ inputMessage: '' });
+  sendMessage() {
+    const { inputValue, messages } = this.data;
 
-      // 模拟客服回复
-      const response = this.getResponse(message);
-      setTimeout(() => {
-        this.addMessage('客服', response);
-      }, 1000);  // 模拟客服回复延迟
+    if (!inputValue.trim()) {
+      wx.showToast({
+        title: '消息不能为空',
+        icon: 'none',
+      });
+      return;
     }
-  },
 
-  // 向消息列表添加消息
-  addMessage: function (from, text) {
-    this.setData({
-      messages: [...this.data.messages, { from, text, id: Date.now() }],
-      scrollTop: this.data.scrollTop + 100 // 控制滚动条向下滚动
-    });
-  },
-
-  // 模拟客服回复
-  getResponse: function (message) {
-    const responses = {
-      '你认识徐昊吗':"我认识，他好像是一个舔狗，很出名",
-      '你好': '您好，欢迎咨询！有什么可以帮您的吗？',
-      '产品': '我们有多种产品，包括茶杯，茶具，茶叶等。',
-      '退货': '如果您需要退货，可以去阿富汗线下店退货',
-      '售后': '我们的售后服务电话是 119-119-119。'
+    // 用户消息
+    const userMessage = {
+      id: messages.length + 1,
+      type: 'user',
+      avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCrOT_7ozdtf6l2rlRtkPKy8yKneS1KI3Owg&s',
+      content: inputValue.trim(),
     };
 
-    return responses[message] || '抱歉，我没有理解您的问题，请重新提问。';
-  }
+    this.setData({
+      messages: [...messages, userMessage],
+      inputValue: '',
+      toView: `msg-${messages.length + 1}`,
+    });
+
+    // 自动回复
+    this.autoReply(userMessage.content);
+  },
+
+  // 自动回复逻辑
+  autoReply(userMessage) {
+    const { messages, autoReplyMap } = this.data;
+    let replyContent = '抱歉，我不太明白您的问题。'; // 默认回复
+
+    // 关键词匹配
+    for (const keyword in autoReplyMap) {
+      if (userMessage.includes(keyword)) {
+        replyContent = autoReplyMap[keyword];
+        break;
+      }
+    }
+
+    // 模拟打字延迟
+    setTimeout(() => {
+      const replyMessage = {
+        id: messages.length + 1,
+        type: 'agent',
+        avatar: 'https://i.pinimg.com/236x/37/f8/2d/37f82d5a37d07f1abb4f31f2daeacb9f.jpg',
+        content: replyContent,
+      };
+
+      this.setData({
+        messages: [...this.data.messages, replyMessage],
+        toView: `msg-${messages.length + 1}`,
+      });
+    }, 1000); // 1秒后回复
+  },
 });
