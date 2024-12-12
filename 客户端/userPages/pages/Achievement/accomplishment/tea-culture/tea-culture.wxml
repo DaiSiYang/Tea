@@ -1,0 +1,17 @@
+<!--pages/accomplishment/tea-culture/tea-culture.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">茶道文化</text>
+    <text class="subtitle">品味东方茶道之美</text>
+  </view>
+
+  <view class="culture-list">
+    <view class="culture-item" wx:for="{{cultureItems}}" wx:key="id">
+      <image class="culture-image" src="{{item.image}}" mode="aspectFill"></image>
+      <view class="culture-info">
+        <text class="culture-title">{{item.title}}</text>
+        <text class="culture-desc">{{item.description}}</text>
+      </view>
+    </view>
+  </view>
+</view>

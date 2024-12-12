@@ -1,0 +1,20 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">茗茶文化殿堂</text>
+  </view>
+  <view class="content">
+    <navigator url="/userPages/pages/Achievement/accomplishment/achievements/achievements" class="nav-item" hover-class="nav-item-hover">
+      <text>茶艺成就</text>
+    </navigator>
+    <navigator url="/userPages/pages/Achievement/accomplishment/tea-culture/tea-culture" class="nav-item" hover-class="nav-item-hover">
+      <text>茶叶品类</text>
+    </navigator>
+    <navigator url="/userPages/pages/Achievement/accomplishment/tea-sets/tea-sets" class="nav-item" hover-class="nav-item-hover">
+      <text>茶道文化</text>
+    </navigator>
+    <navigator url="/userPages/pages/Achievement/accomplishment/tea-types/tea-types" class="nav-item" hover-class="nav-item-hover">
+      <text>茶具鉴赏</text>
+    </navigator>
+  </view>
+</view>

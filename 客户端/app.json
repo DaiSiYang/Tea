@@ -20,7 +20,12 @@
       "pages": [
         "pages/Setup/Setup",
         "pages/Friend/index",
-        "pages/Customer/index"
+        "pages/Customer/index",
+        "pages/Achievement/index/index",
+        "pages/Achievement/accomplishment/achievements/achievements",
+        "pages/Achievement/accomplishment/tea-culture/tea-culture",
+        "pages/Achievement/accomplishment/tea-sets/tea-sets",
+        "pages/Achievement/accomplishment/tea-types/tea-types"
       ]
     },
     {

@@ -1,0 +1,131 @@
+/* pages/accomplishment/achievements/achievements.wxss */
+.container {
+  padding: 30rpx;
+  background-color: #f3f7f7;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: 60rpx 0;
+  margin-bottom: 40rpx;
+  position: relative;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80rpx;
+  height: 3rpx;
+  background: linear-gradient(90deg, transparent, #8B4513, transparent);
+}
+
+.title {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #4a2f1d;
+  letter-spacing: 6rpx;
+  position: relative;
+  display: inline-block;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: #8B4513;
+  margin-top: 16rpx;
+  display: block;
+  opacity: 0.8;
+}
+
+.achievement-list {
+  padding: 20rpx;
+}
+
+.achievement-item {
+  background: #fff;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  border-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 10rpx 30rpx rgba(139, 69, 19, 0.05);
+  border: 1rpx solid rgba(139, 69, 19, 0.1);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.achievement-icon {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  margin-right: 30rpx;
+  background: rgba(139, 69, 19, 0.1);
+}
+
+.achievement-info {
+  flex: 1;
+}
+
+.achievement-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #4a2f1d;
+  margin-bottom: 12rpx;
+  display: block;
+}
+
+.achievement-desc {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.achievement-progress {
+  width: 100%;
+}
+
+.progress-text {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 8rpx;
+  text-align: right;
+  display: block;
+}
+
+.achievement-status {
+  margin-left: 30rpx;
+  text-align: center;
+}
+
+.status-text {
+  font-size: 24rpx;
+  color: #999;
+  padding: 8rpx 20rpx;
+  border-radius: 100rpx;
+  background: rgba(0,0,0,0.05);
+}
+
+.unlocked .status-text {
+  color: #8B4513;
+  background: rgba(139, 69, 19, 0.1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.achievement-item:nth-child(1) { animation-delay: 0.1s; }
+.achievement-item:nth-child(2) { animation-delay: 0.2s; }
+.achievement-item:nth-child(3) { animation-delay: 0.3s; }
+.achievement-item:nth-child(4) { animation-delay: 0.4s; }
+.achievement-item:nth-child(5) { animation-delay: 0.5s; }

@@ -1,12 +1,13 @@
 const express = require('express')
-const mysql = require('mysql')
+
+const mysql = require('mysql2');
 const bodyParser = require('body-parser');
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   port: '3306',
   password: '051223',
-  database: 'my-mysql'
+  database: 'my_mysql'
 });
 
 db.connect(function(err){

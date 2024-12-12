@@ -1,0 +1,20 @@
+<!--pages/accomplishment/tea-types/tea-types.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">茶叶品类</text>
+    <text class="subtitle">探索中国传统六大茶类</text>
+  </view>
+  
+  <view class="tea-list">
+    <view class="tea-item" wx:for="{{teaTypes}}" wx:key="id">
+      <image class="tea-image" src="{{item.image}}" mode="aspectFill"></image>
+      <view class="tea-info">
+        <text class="tea-name">{{item.name}}</text>
+        <text class="tea-desc">{{item.description}}</text>
+        <view class="tea-features">
+          <text class="feature" wx:for="{{item.features}}" wx:key="*this" wx:for-item="feature">{{feature}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

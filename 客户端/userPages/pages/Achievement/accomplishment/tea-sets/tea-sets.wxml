@@ -1,0 +1,30 @@
+<!--pages/accomplishment/tea-sets/tea-sets.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">茶具鉴赏</text>
+    <text class="subtitle">传统茶具之美</text>
+  </view>
+
+  <view class="tea-sets-list">
+    <view class="tea-set-item" wx:for="{{teaSets}}" wx:key="id">
+      <image class="tea-set-image" src="{{item.image}}" mode="aspectFill"></image>
+      <view class="tea-set-info">
+        <text class="tea-set-name">{{item.name}}</text>
+        <text class="tea-set-desc">{{item.description}}</text>
+        <view class="tea-set-tags">
+          <text class="tag" wx:for="{{item.tags}}" wx:key="*this" wx:for-item="tag">{{tag}}</text>
+        </view>
+        <view class="tea-set-details">
+          <view class="detail-item">
+            <text class="detail-label">产地</text>
+            <text class="detail-value">{{item.origin}}</text>
+          </view>
+          <view class="detail-item">
+            <text class="detail-label">年代</text>
+            <text class="detail-value">{{item.period}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

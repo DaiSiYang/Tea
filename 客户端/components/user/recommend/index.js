@@ -47,6 +47,11 @@ Component({
         url: '/memberPages/pages/cart/cart',
       })
     }
+    if(index === 3){
+      wx.navigateTo({
+        url: '/userPages/pages/Achievement/index/index',
+      })
+    }
     if(index === 6){
       wx.switchTab({
         url: '/pages/member/member',

@@ -1,0 +1,24 @@
+<!--pages/accomplishment/achievements/achievements.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">茶艺成就</text>
+    <text class="subtitle">记录您的茶艺之路</text>
+  </view>
+
+  <view class="achievement-list">
+    <view class="achievement-item" wx:for="{{achievements}}" wx:key="id">
+      <image class="achievement-icon" src="{{item.icon}}" mode="aspectFill"></image>
+      <view class="achievement-info">
+        <text class="achievement-title">{{item.title}}</text>
+        <text class="achievement-desc">{{item.description}}</text>
+        <view class="achievement-progress">
+          <progress percent="{{item.progress}}" stroke-width="3" activeColor="#8B4513" backgroundColor="#f0f0f0"/>
+          <text class="progress-text">{{item.progress}}%</text>
+        </view>
+      </view>
+      <view class="achievement-status {{item.unlocked ? 'unlocked' : ''}}">
+        <text class="status-text">{{item.unlocked ? '已解锁' : '未解锁'}}</text>
+      </view>
+    </view>
+  </view>
+</view>
