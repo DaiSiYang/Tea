@@ -1,0 +1,95 @@
+.page-container {
+  background-color: #f8f8f8;
+
+  padding: 0;
+}
+
+.swiper-section {
+  padding: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-item-wrap {
+  width: 700rpx;
+  height: 380rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.15);
+  transform: scale(0.96);
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.swiper-item-wrap.active {
+  transform: scale(1);
+  opacity: 1;
+  box-shadow: 0 6rpx 20rpx rgba(0, 0, 0, 0.2);
+}
+
+.swiper-image {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.image-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30rpx 24rpx 20rpx;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 20%, transparent);
+  color: #ffffff;
+}
+
+.image-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 6rpx;
+  text-shadow: 0 2rpx 4rpx rgba(0,0,0,0.3);
+}
+
+.image-desc {
+  font-size: 24rpx;
+  opacity: 0.95;
+  text-shadow: 0 2rpx 4rpx rgba(0,0,0,0.3);
+}
+
+.swiper-item-wrap:active {
+  transform: scale(0.98);
+}
+
+/* 自定义指示点样式 */
+.wx-swiper-dots {
+  margin-bottom: 12rpx;
+}
+
+.wx-swiper-dot {
+  width: 12rpx !important;
+  height: 12rpx !important;
+  border-radius: 6rpx !important;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.4) !important;
+}
+
+.wx-swiper-dot-active {
+  width: 28rpx !important;
+  background: #ffffff !important;
+} 

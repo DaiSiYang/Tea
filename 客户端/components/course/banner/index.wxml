@@ -1,14 +1,31 @@
-<swiper
-    indicator-dots="true"   
-    autoplay="true"   
-    interval="3000"   
-    duration="500"   
-    circular="true"  
-    indicator-color="#000"  
-    indicator-active-color="#fff"
-    class="bannerUrl"  
-> 
-  <swiper-item wx:for="{{bannerList}}" wx:key="{{item.id}}">
-    <image src="{{item.url}}" mode="scaleToFill"/>
-  </swiper-item>
-</swiper>
+<view class="page-container">
+  <view class="swiper-section">
+    <view class="swiper-container">
+      <swiper class="swiper" 
+              indicator-dots="{{true}}" 
+              autoplay="{{true}}" 
+              interval="{{3000}}" 
+              duration="{{500}}"
+              circular="{{true}}"
+              indicator-color="rgba(255, 255, 255, 0.4)"
+              indicator-active-color="#ffffff"
+              previous-margin="30rpx"
+              next-margin="30rpx"
+              bindchange="handleSwiperChange">
+        <swiper-item wx:for="{{swiperList}}" wx:key="id" class="swiper-item">
+          <view class="swiper-item-wrap {{currentIndex === index ? 'active' : ''}}">
+            <image src="{{item.imageUrl}}" 
+                   mode="aspectFill" 
+                   class="swiper-image"
+                   bindtap="handleSwiperClick"
+                   data-id="{{item.id}}"/>
+            <view class="image-info">
+              <view class="image-title">{{item.title}}</view>
+              <view class="image-desc">{{item.desc}}</view>
+            </view>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view> 
