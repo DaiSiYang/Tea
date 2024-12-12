@@ -10,6 +10,11 @@ Page({
     url:"https://img2.baidu.com/it/u=2407755203,832656601&fm=253&fmt=auto?w=1066&h=800",
     content:""
   },
+  onClickIcon(){
+    wx.navigateTo({
+      url: '/userPages/pages/Customer/index',
+    })
+  },
   onNar(){
     wx.navigateTo({
       url: '/memberPages/pages/cart/cart',

@@ -17,12 +17,14 @@
 <view class="text">{{content}}</view>
 
 <van-goods-action>
-  <van-goods-action-icon icon="chat-o" text="客服" bind:click="onClickIcon" />
+  <van-goods-action-icon icon="chat-o" class="" text="客服" bind:click="onClickIcon" />
   <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickIcon" />
   <van-goods-action-button
     text="加入购物车"
     type="warning"
     bind:click="onNar"
+    class="Cart"
+    color="#a49a8d" 
   />
-  <van-goods-action-button text="立即购买" />
+  <van-goods-action-button color="#494136" class="buying"  text="立即购买" />
 </van-goods-action>

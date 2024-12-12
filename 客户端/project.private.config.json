@@ -9,6 +9,31 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/course/course",
+          "pathName": "pages/course/course",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/course/course",
+          "pathName": "pages/course/course",
+          "query": "",
+          "launchMode": "default",
+          "scene": null,
+          "partialCompile": {
+            "enabled": true,
+            "pages": []
+          }
+        },
+        {
+          "name": "pages/course/course",
+          "pathName": "pages/course/course",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "couresPages/pages/champion/champion",
           "pathName": "couresPages/pages/champion/champion",
           "query": "",
