@@ -1,15 +1,20 @@
-<view class="title">
-<text class="hot">冠军课程</text>
-<text class="more" bind:tap="onMore">更多 > </text>
-</view>
-<view class="item" wx:for="{{itemList}}" wx:key="{{index}}">
-<view class="name">
-<text class="title">{{item.text}}</text>
+<view class="champion-container">
+  <!-- 顶部标题区域 -->
+  <view class="header">
+    <text class="title">冠军榜</text>
+    <text class="subtitle">TOP 10</text>
+  </view>
 
-</view>
-<view class="subtitle">立享趣味线下课程，学习两天一夜</view>
-<view class="bottom">
-<text>现在购买，即买即学</text>
-
-</view>
+  <!-- 冠军列表 -->
+  <view class="champion-list">
+    <block wx:for="{{champions}}" wx:key="{{index}}">
+      <view class="champion-item {{index < 3 ? 'top-three' : ''}}">
+        <view class="rank-number {{index < 3 ? 'top-rank' : ''}}">{{index + 1}}</view>
+        <view class="content">
+          <text class="name">{{item.name}}</text>
+          <text class="score {{index < 3 ? 'top-score' : ''}}">{{item.views}}次浏览</text>
+        </view>
+      </view>
+    </block>
+  </view>
 </view>
