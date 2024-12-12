@@ -1,34 +1,69 @@
+<view class="history-container">
+  <!-- 顶部导航 -->
+  <view class="nav-bar">
+    <view class="back-icon" bindtap="goBack">
+      <image src="/assets/icons/back.png" mode="aspectFit"/>
+    </view>
+    <text class="page-title">茶道·品茗</text>
+  </view>
 
-<view class="back"></view>
-<view class="introduce" wx:for="{{list}}" wx:key="{{item.id}}">
-<view class="title">
-{{item.title}}
-</view>
-<view class="time">
-{{item.time}}
-</view>
-<view class="p_1 back">
-  {{item.p_1}}
-</view>
-<view class="subTitle">
-  {{item.subtitle_1}}
-</view>
-<view class="p_1">
-  {{item.p_2}}
-</view>
-<view class="subTitle">
-  {{item.subtitle_2}}
-</view>
-<view class="p_1">
-  {{item.p_3}}
-</view>
-<view class="subTitle">
-  {{item.subtitle_3}}
-</view>
-<view class="p_1">
-  {{item.p_4}}
-</view>
-<view class="img">
-<image src="{{item.img}}" mode="widthFix"/>
-</view>
+  <!-- 文章内容 -->
+  <view class="article-content" wx:for="{{list}}" wx:key="{{item.id}}">
+    <!-- 标题区域 -->
+    <view class="header">
+      <view class="title-wrapper">
+        <text class="title">{{item.title}}</text>
+        <view class="title-decoration"></view>
+      </view>
+      <view class="meta-info">
+        <text class="time">{{item.time}}</text>
+        <text class="read-count">{{item.readCount || '7.0k'}}阅读</text>
+      </view>
+    </view>
+
+    <!-- 内容区域 -->
+    <view class="content-wrapper">
+      <!-- 导语 -->
+      <view class="intro-text">
+        <text>{{item.p_1}}</text>
+      </view>
+
+      <!-- 分节内容 -->
+      <block wx:if="{{item.subtitle_1}}">
+        <view class="section">
+          <view class="section-header">
+            <view class="section-line"></view>
+            <text class="section-title">{{item.subtitle_1}}</text>
+          </view>
+          <view class="section-content">{{item.p_2}}</view>
+        </view>
+      </block>
+
+      <block wx:if="{{item.subtitle_2}}">
+        <view class="section">
+          <view class="section-header">
+            <view class="section-line"></view>
+            <text class="section-title">{{item.subtitle_2}}</text>
+          </view>
+          <view class="section-content">{{item.p_3}}</view>
+        </view>
+      </block>
+
+      <block wx:if="{{item.subtitle_3}}">
+        <view class="section">
+          <view class="section-header">
+            <view class="section-line"></view>
+            <text class="section-title">{{item.subtitle_3}}</text>
+          </view>
+          <view class="section-content">{{item.p_4}}</view>
+        </view>
+      </block>
+
+      <!-- 图片展示 -->
+      <view class="image-container" wx:if="{{item.img}}">
+        <image src="{{item.img}}" mode="widthFix" class="article-image"/>
+        <view class="image-overlay"></view>
+      </view>
+    </view>
+  </view>
 </view>
