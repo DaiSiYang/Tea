@@ -13,10 +13,10 @@ Component({
    */
   data: {
     itemList:[
-      {iconfont:"icon-tuijiankecheng",text:"新课推荐"},
-      {iconfont:"icon-chengguoshuliang",text:"冠军课程"},
-      {iconfont:"icon-mianfei-xianxing",text:"免费好课"},
-      {iconfont:"icon-shouji",text:"微课程"},
+      {iconfont:"icon-zuixinkecheng",text:"新课推荐"},
+      {iconfont:"icon-rewardstrophy",text:"冠军课程"},
+      {iconfont:"icon-icon6",text:"免费好课"},
+      {iconfont:"icon-weikecheng",text:"微课程"},
     ]
   },
 
