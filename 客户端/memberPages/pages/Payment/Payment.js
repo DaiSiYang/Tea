@@ -4,10 +4,37 @@ Page({
     orderNo: '',
     createTime: '',
     countdown: '13:19',
-    countdownTimer: null
+    countdownTimer: null,
+    totalPrice:0,
+    items: [
+     
+    ]
   },
-
+  countListPrice(){
+    let itemtotalPrice = this.data.items.reduce((sum,item)=>{
+      return sum + item.price
+    },0)
+    this.setData({
+      totalPrice:itemtotalPrice
+    })
+  },
+  getItem(){
+    wx.request({
+      url: 'http://localhost:8080/api/mysql/cart',
+      method:"GET",
+      success:(res)=>{
+        console.log(res.data);
+        this.setData({
+          items: res.data
+        })
+        console.log(this.data.items);
+        this.countListPrice()
+      },
+      fail:(err)=>{}
+    })
+  },
   onLoad(options) {
+    this.getItem()
     // 接收订单数据
     if (options.orderNo && options.amount) {
       this.setData({

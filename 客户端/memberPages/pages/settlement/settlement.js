@@ -3,21 +3,9 @@ Page({
     orderInfo: {
       orderId: 'ORDER20240321001',
       totalAmount: 299.99,
+      totalPrice:0,
       items: [
-        {
-          id: 1,
-          name: '商品名称1',
-          price: 199.99,
-          quantity: 1,
-          image: '/images/product1.png'
-        },
-        {
-          id: 2,
-          name: '商品名称2',
-          price: 100.00,
-          quantity: 1,
-          image: '/images/product2.png'
-        }
+       
       ]
     },
     address: {
@@ -26,9 +14,39 @@ Page({
       detail: '北京市朝阳区xxx街道xxx小区'
     }
   },
-
+  gettotalPrice(){
+    const app = getApp();
+    const totalPrices = app.globalData.totalPrices
+    this.setData({
+      totalPrice:totalPrices
+    })
+  },
+  countListPrice(){
+    let itemtotalPrice = this.data.items.reduce((sum,item)=>{
+      return sum + item.price
+    },0)
+    this.setData({
+      totalPrice:itemtotalPrice
+    })
+  },
+  getItem(){
+    wx.request({
+      url: 'http://localhost:8080/api/mysql/cart',
+      method:"GET",
+      success:(res)=>{
+        console.log(res.data);
+        this.setData({
+          items: res.data
+        })
+        console.log(this.data.items);
+        this.countListPrice()
+      },
+      fail:(err)=>{}
+    })
+  },
   onLoad: function(options) {
     this.getOrderDetail();
+    this.getItem()
   },
 
   getOrderDetail() {

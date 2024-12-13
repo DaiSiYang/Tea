@@ -25,7 +25,7 @@ page {
 }
 
 .address-detail {
-  font-size: 28rpx;
+  font-size: 24rpx;
   color: #666;
   line-height: 1.5;
 }

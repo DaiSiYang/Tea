@@ -1,7 +1,8 @@
 // app.js
 App({
   globalData: {
-    userInfo: null
+    userInfo: null,
+    totalPrices:0
   },
   options: {
     styleIsolation: 'shared',

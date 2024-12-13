@@ -26,6 +26,7 @@ Page({
           list:res.data.map(item=>({...item,count:1}))
         })
         this.countListPrice()
+        this.updateGlobalData()
       }
     })
   },
@@ -39,6 +40,7 @@ Page({
       })
     }
     this.countListPrice()
+    this.updateGlobalData()
   },
   sub(id){
     const itemId = id.currentTarget.dataset.id
@@ -81,11 +83,22 @@ Page({
       })
     }
     this.countListPrice()
+    this.updateGlobalData()
   },
   cartClick(){
     wx.navigateTo({
       url: '/memberPages/pages/settlement/settlement',
     })
+  },
+  updateGlobalData() {
+    // 获取全局 app 实例
+    const app = getApp();
+    
+    // 修改全局数据
+    app.globalData.totalPrices = this.data.totalPrice;
+    
+    // 访问全局数据
+    console.log(app.globalData.totalPrices);
   },
   /**
    * 生命周期函数--监听页面加载

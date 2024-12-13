@@ -6,7 +6,7 @@
     <view class="amount-label">支付金额</view>
     <view class="amount-value">
       <text class="currency">¥</text>
-      <text>{{amount}}</text>
+      <text>{{totalPrice}}</text>
     </view>
   </view>
 
