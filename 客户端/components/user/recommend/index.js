@@ -15,7 +15,7 @@ Component({
     recommendItemList:[
       {image:"/static/userIcon/课程.png",text:"我的课程"},
       {image:"/static/userIcon/收藏.png",text:"我的收藏"},
-      {image:"/static/userIcon/我的成就.png",text:"我的成就"},
+      {image:"/static/userIcon/我的成就.png",text:"文化殿堂"},
       {image:"/static/userIcon/订单.png",text:"我的订单"},
       {image:"/static/userIcon/足迹.png",text:"足迹"},
       {image:"/static/userIcon/会员购.png",text:"会员购"},
