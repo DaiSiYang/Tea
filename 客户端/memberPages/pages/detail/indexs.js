@@ -30,12 +30,21 @@ Page({
           title: '加入成功',
           icon:'success'
         })
+        setTimeout(()=>{
+          wx.navigateTo({
+            url: '/memberPages/pages/cart/cart',
+          })
+        },500)
       },
       fail:(err)=>{
         wx.showToast({
           title: '添加失败',
           icon:'success'
         })
+      },
+      complete:()=>{
+
+        
       }
     })
   },

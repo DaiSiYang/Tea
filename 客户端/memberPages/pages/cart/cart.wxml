@@ -4,7 +4,7 @@
 <view  wx:else="{{list.length >= 1}}">
 <view class="item" wx:for="{{list}}" wx:key="{{item.id}}">
 <view class="img">
-<image src="{{item.url}}" mode="widthFix"/>
+<image src="{{item.url}}" mode="aspectFill"/>
 </view>
 <view class="right">
 <view class="title">{{item.text}}</view>
