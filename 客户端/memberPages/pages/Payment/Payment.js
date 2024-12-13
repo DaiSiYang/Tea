@@ -87,7 +87,18 @@ Page({
       countdownTimer: timer
     });
   },
-
+clearCart(){
+  wx.request({
+    url: 'http://localhost:8080/api/mysql/del/all',
+    method:'DELETE',
+    success:(res)=>{
+      wx.showToast({
+        title: '已清空购物车',
+        icon:'success'
+      })
+    }
+  })
+},
   handlePayment() {
     wx.showLoading({
       title: '正在支付...',
@@ -104,9 +115,11 @@ Page({
         success: () => {
           setTimeout(() => {
             wx.navigateBack();
+            
           }, 2000);
         }
       });
+    
     }, 1500);
   },
 

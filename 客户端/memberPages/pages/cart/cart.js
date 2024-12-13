@@ -66,6 +66,7 @@ Page({
             fail:(err)=>{
               wx.showToast({
                 title: '删除失败',
+                icon:'error'
               })
             }
           })

@@ -418,7 +418,8 @@ app.get('/api/mysql/cart',(req,res)=>{
 })
 app.delete('/api/mysql/cart/:id',(req,res)=>{
     const id = parseInt(req.params.id)
-    const sql = 'DELETE FROM cart WHERE id=?';
+     const sql = 'DELETE FROM cart WHERE id=?';
+
     db.query(sql , id,(err, result) => {
         if (err) throw err;
         res.status(200).json(result)
