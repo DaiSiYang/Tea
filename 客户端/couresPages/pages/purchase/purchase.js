@@ -15,6 +15,11 @@ Page({
       url: '/userPages/pages/Customer/index',
     })
   },
+  onCart(){
+    wx.navigateTo({
+      url: '/memberPages/pages/cart/cart',
+    })
+  },
   onNar(){
     wx.navigateTo({
       url: '/memberPages/pages/cart/cart',

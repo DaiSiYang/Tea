@@ -1,0 +1,33 @@
+<view class="payment-container">
+  <view class="payment-title">订单支付</view>
+  
+  <!-- 支付金额 -->
+  <view class="amount-section">
+    <view class="amount-label">支付金额</view>
+    <view class="amount-value">
+      <text class="currency">¥</text>
+      <text>{{amount}}</text>
+    </view>
+  </view>
+
+  <!-- 倒计时 -->
+  <view class="countdown-wrap">
+    <view>
+      <text class="countdown-text">支付剩余时间</text>
+      <text class="countdown-time">{{countdown}}</text>
+    </view>
+    <view class="countdown-tip">超时订单将自动取消</view>
+  </view>
+
+  <!-- 支付按钮 -->
+  <view class="pay-button" bindtap="handlePayment">
+    微信支付
+  </view>
+
+  <!-- 订单信息 -->
+  <view class="order-info">
+    <view class="order-info-title">订单信息</view>
+    <view class="order-info-item">订单编号：{{orderNo}}</view>
+    <view class="order-info-item">创建时间：{{createTime}}</view>
+  </view>
+</view> 

@@ -12,7 +12,9 @@
       "pages": [
         "pages/classify/classify",
         "pages/cart/cart",
-        "pages/detail/indexs"
+        "pages/detail/indexs",
+        "pages/settlement/settlement",
+        "pages/Payment/Payment"
       ]
     },
     {

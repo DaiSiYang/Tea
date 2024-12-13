@@ -11,6 +11,11 @@ Page({
     price:'',
     text:''
   },
+  nav(){
+    wx.navigateTo({
+      url: '/memberPages/pages/settlement/settlement',
+    })
+  },
   addList(){
     wx.request({
       url: 'http://127.0.0.1:8080/api/cart/add',

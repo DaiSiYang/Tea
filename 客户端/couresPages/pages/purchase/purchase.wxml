@@ -26,5 +26,5 @@
     class="Cart"
     color="#a49a8d" 
   />
-  <van-goods-action-button color="#494136" class="buying"  text="立即购买" />
+  <van-goods-action-button color="#494136" bind:tap="onCart" class="buying"  text="立即购买" />
 </van-goods-action>

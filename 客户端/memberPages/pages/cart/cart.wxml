@@ -22,6 +22,7 @@
   decimal-length="0"
   button-text="提交订单"
   bind:tap="cartClick"
+  color="#494136"
 />
 </view>
 </view>
