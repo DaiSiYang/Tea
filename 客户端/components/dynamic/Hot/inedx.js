@@ -1,12 +1,6 @@
 
 Component({
-  onReachBottom: function() {  
-    console.log('触发了上拉触底的事件');  
-    // 在这里执行加载更多数据的逻辑  
-    wx.showLoading({  
-      title: '加载中...',  
-    });  
-  }  ,
+
   /**
    * 组件的属性列表
    */
@@ -18,6 +12,8 @@ Component({
    * 组件的初始数据
    */
   data: {
+    zan:"/static/HotIcon/赞.png",
+    zanTrue:'/static/HotIcon/点赞.png',
     HotList:[
     //   {
     //     // 头像
@@ -332,6 +328,32 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    Like(id){
+      console.log(id.currentTarget.dataset.id);
+      const Itemid = id.currentTarget.dataset.id
+      const item = this.data.HotList.find(item=>item.id == Itemid)
+      console.log(item);
+      item.num++
+      if(item.num % 2 == 0){
+        if(item){
+          if(item){
+            item.flag = true
+            item.Thumbs+=1
+            this.setData({
+              HotList:[...this.data.HotList]
+            })
+          }
+        }
+      }else{
+
+        item.flag = false
+        item.Thumbs-=1
+        this.setData({
+          HotList:[...this.data.HotList]
+        })
+      }
+
+    },
     changeComments(id){
       const ItemId = id.currentTarget.dataset.id
       const item = this.data.HotList.find(item => item.id == ItemId)
@@ -369,19 +391,36 @@ getHotList(){
     method:"GET",
     success:(res)=>{
       this.setData({
-        HotList:res.data
+        HotList:res.data.map(item=>({...item,flag:false,num:1}))
       })
       console.log(this.data.HotList);
     }
   })
 }
-
 },
 onReachBottom:function(e) {
   this.getHotList()
 },
 attached(){
   this.getHotList()
-}
+},
+onReachBottom: function() {  
+  console.log('触发了上拉触底的事件');  
+  // 在这里执行加载更多数据的逻辑  
+  wx.showLoading({  
+    title: '加载中...',  
+  });  
+  wx.request({
+    url: 'http://127.0.0.1:8080/api/mysql/hot',
+    method:"GET",
+    success:(res)=>{
+      console.log(res.data);
+      this.setData({
+        HotList:[...this.data.HotList,res.data]
+      })
+      console.log(this.data.HotList);
+    }
+  })
+}  
 
 })

@@ -37,7 +37,7 @@
     <text >评论</text>
   </view>
   <view class="flex">
-    <image src="/static/HotIcon/赞.png" mode="widthFix"/>
+    <image src="{{item.flag ? zanTrue : zan}}" bind:tap="Like" data-id="{{item.id}}" mode="widthFix"/>
     <text>{{item.Thumbs}}</text>
   </view>
 </view>
