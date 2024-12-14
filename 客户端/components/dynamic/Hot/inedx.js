@@ -19,7 +19,7 @@ Component({
     //     // 头像
     //     avatarUrl:"/static/cs/tgXH.jpg",
     //     // 昵称
-    //     name:"徐网友",
+    //     name:"徐网友",  
     //     //介绍
     //     actor:"路人",
     //     //内容
@@ -336,23 +336,19 @@ Component({
       item.num++
       if(item.num % 2 == 0){
         if(item){
-          if(item){
-            item.flag = true
-            item.Thumbs+=1
-            this.setData({
-              HotList:[...this.data.HotList]
-            })
-          }
-        }
-      }else{
-
-        item.flag = false
-        item.Thumbs-=1
-        this.setData({
-          HotList:[...this.data.HotList]
-        })
+          item.flag = true
+          item.Thumbs+=1
       }
-
+      }else{
+        if(item){
+          item.flag = false
+          item.Thumbs-=1
+      }
+      }
+      this.setData({
+        HotList: [...this.data.HotList]
+      });
+      wx.setStorageSync('HotList', this.data.HotList);
     },
     changeComments(id){
       const ItemId = id.currentTarget.dataset.id
@@ -403,6 +399,12 @@ onReachBottom:function(e) {
 },
 attached(){
   this.getHotList()
+  const storedHotList = wx.getStorageSync('HotList');
+  if (storedHotList) {
+    this.setData({
+      HotList: storedHotList
+    });
+  }
 },
 onReachBottom: function() {  
   console.log('触发了上拉触底的事件');  

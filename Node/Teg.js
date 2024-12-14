@@ -440,4 +440,11 @@ app.get('/api/mysql/purchase/:id',(req, res)=>{
         res.status(200).json(result)
     })
 })
+app.get('/api/mysql/classify',(req, res)=>{
+    const sql = 'SELECT * FROM classify';
+    db.query(sql , (err, result) => {
+        if (err) throw err;
+        res.status(200).json(result)
+    })
+})
 app.listen(8080, () => console.log("http://127.0.0.1:8080"))
