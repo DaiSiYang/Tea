@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.daisy.teabackgroundmanagementsystemspringboot.Mapper.ContentMapper">
+    <insert id="addHotList">
+        insert into hot(avatarUrl,name,actor,text,image1,image2,forward,thumbs,update_time,create_time)
+        values(#{avatarUrl},#{name},#{actor},#{text},#{image1},#{image2},#{forward},#{Thumbs},#{updateTime},#{createTime})
+    </insert>
+    <update id="updateHot">
+        update hot
+        <set>
+            <if test="avatarUrl != null">
+                avatarUrl=#{avatarUrl},
+            </if>
+            <if test="name != null">
+                name=#{name},
+            </if>
+            <if test="actor != null">
+                actor=#{actor},
+            </if>
+            <if test="text != null">
+                text=#{text},
+            </if>
+            <if test="image1 != null">
+                image1=#{image1},
+            </if>
+            <if test="image2 != null">
+                image2=#{image2},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+    <update id="updateRecommand">
+        update recommand
+        <set>
+            <if test="url != null">
+                url=#{url},
+            </if>
+            <if test="text != null">
+                text=#{text},
+            </if>
+            <if test="price != null">
+                price=#{price},
+            </if>
+            <if test="updateTime != null">
+                update_time=#{updateTime},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+</mapper>
